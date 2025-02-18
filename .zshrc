@@ -24,10 +24,11 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 autoload -Uz compinit && compinit
 zinit cdreplay -q
+setopt correct_all
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -l --color=always $realpath'
 
 #----------/History/----------#
 
@@ -56,6 +57,21 @@ zinit light Aloxaf/fzf-tab
 alias ls='lsd'
 alias c='clear'
 alias umatrix='unimatrix -s 95 -f'
+alias ll='lsd -lh'
+alias la='lsd -a'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias mirrors="sudo reflector --verbose --country Peru,Chile,Ecuador,Brazil,US,Colombia,Argentina --protocol https --latest 25 --sort rate --save /etc/pacman.d/mirrorlist"
+
+#----------/bindkey/----------#
+
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^H' backward-kill-word
+bindkey "^[[3~" delete-char
 
 #----------/Shell integrations/----------#
 
