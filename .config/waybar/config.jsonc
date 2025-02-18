@@ -65,9 +65,9 @@
       "portable": "",
       "car": "",
       "default": [
-        "",
-        "",
-        ""
+        " ",
+        " ",
+        " "
       ]
     },
     "on-click": "/home/xardec/.config/hypr/scripts/volume.sh toggle-mute -n"
