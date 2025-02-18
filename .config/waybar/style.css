@@ -1,0 +1,70 @@
+* {
+    font-family: "SF pro display", "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.25);
+    /*border: 1px solid aqua;*/
+    border-radius: 10px;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+/*
+.modules-right,
+.modules-left,
+.modules-center {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+*/
+
+#hyprland-window,
+#custom-wallpaper,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio {
+    padding: 4px;
+}
+#taskbar,
+#taskbar button{
+    padding: 0;
+    margin: 0;
+}
+
+#hyprland-window {
+    padding: 4px
+}
+
+#clock {
+    border-radius: 10px;
+}
+
+#battery {
+    color: #61bb46;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}

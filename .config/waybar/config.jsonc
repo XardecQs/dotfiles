@@ -1,0 +1,75 @@
+{
+  "layer": "bottom",
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/window",
+    "wlr/taskbar"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "temperature",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "max-length": 35,
+    "rewrite": {
+      "": "󰣇"
+    }
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "kora custom",
+    "tooltip-format": "{name}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "clock": {
+    "format": "{:%a %d %b %y | %I:%M %p}"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "on-scroll-up": "/home/xardec/.config/hypr/scripts/volume.sh up 1 -n",
+    "on-scroll-down": "/home/xardec/.config/hypr/scripts/volume.sh down 1 -n",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "/home/xardec/.config/hypr/scripts/volume.sh toggle-mute -n"
+  }
+}
