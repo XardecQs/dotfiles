@@ -51,7 +51,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-
 #----------/alias/----------#
 
 alias ls='lsd'
@@ -65,6 +64,7 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mirrors="sudo reflector --verbose --country Peru,Chile,Ecuador,Brazil,US,Colombia,Argentina --protocol https --latest 25 --sort rate --save /etc/pacman.d/mirrorlist"
+alias fl='fzf-lovely'
 
 #----------/bindkey/----------#
 
