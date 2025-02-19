@@ -24,7 +24,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 autoload -Uz compinit && compinit
 zinit cdreplay -q
-setopt correct_all
+#setopt correct_all
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
