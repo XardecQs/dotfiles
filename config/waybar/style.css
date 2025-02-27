@@ -86,7 +86,7 @@ tooltip label {
     padding: 0px 3px;
     margin: 1px;
     border-radius: 20px;
-    color: @foregroundAlpha;
+    color: @foreground;
 }
 
 #workspaces button.active {
@@ -109,7 +109,7 @@ tooltip label {
 #workspaces button.urgent {
     background-color: #eb4d4b;
     color: #ffffff;
-    animation: pulse 1s infinite alternate;
+    animation: blink 1s infinite;
 }
 
 #temperature,
@@ -161,24 +161,18 @@ tooltip label {
 }
 
 #temperature.critical {
-    animation: blink 1s infinite;
+    animation: blink 1s infinite alternate;
 }
 
 /* Animaciones */
 @keyframes blink {
-    from {
+    0% {
         opacity: 1;
     }
-    to {
+    50% {
         opacity: 0.6;
     }
-}
-
-@keyframes pulse {
-    from {
-        background-color: #eb4d4b;
-    }
-    to {
-        background-color: #ff6b6b;
+    100% {
+        opacity: 1;
     }
 }
