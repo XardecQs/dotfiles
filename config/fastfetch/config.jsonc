@@ -37,7 +37,7 @@
         {
             "type": "host",
             "key": " Machine",
-            "format": "ASUS {name}",
+            "format": "{family} {name}",
             "keyColor": "32",
         },
         {
@@ -121,7 +121,7 @@
         },
         {
             "type": "sound",
-            "key": "󱡬 salida de audio",
+            "key": "󱡬 Salida de Audio",
             "keyColor": "36", 
         },
         "break",
