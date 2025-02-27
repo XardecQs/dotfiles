@@ -1,10 +1,10 @@
-#----------/p10k-init/----------#
+#/────────────────────/p10k-init/────────────────────/#
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#----------/zinit/----------#
+#/────────────────────/zinit/────────────────────/#
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -15,12 +15,12 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-#----------/p10k/----------#
+#/────────────────────/p10k/────────────────────/#
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#----------/completion/----------#
+#/────────────────────/completion/────────────────────/#
 
 autoload -Uz compinit && compinit
 zinit cdreplay -q
@@ -30,7 +30,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -l --color=always $realpath'
 
-#----------/History/----------#
+#/────────────────────/History/────────────────────/#
 
 HISTSIZE=50000
 HISTFILE=~/.zsh_history
@@ -44,20 +44,21 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-#----------/plugins/----------#
+#/────────────────────/plugins/────────────────────/#
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-#----------/alias/----------#
+#/────────────────────/alias/────────────────────/#
 
 alias ls='lsd'
 alias c='clear'
 alias umatrix='unimatrix -s 95 -f'
 alias ll='lsd -lh'
 alias la='lsd -a'
+alias lla='lsd -la'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias grep='grep --color=auto'
@@ -65,15 +66,17 @@ alias diff='diff --color=auto'
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mirrors="sudo reflector --verbose --country Peru,Chile,Ecuador,Brazil,US,Colombia,Argentina --protocol https --latest 25 --sort rate --save /etc/pacman.d/mirrorlist"
 alias fl='fzf-lovely'
+alias gparted='sudo -E gparted'
+alias cf='clear && fastfetch'
 
-#----------/bindkey/----------#
+#/────────────────────/bindkey/────────────────────/#
 
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^H' backward-kill-word
 bindkey "^[[3~" delete-char
 
-#----------/Shell integrations/----------#
+#/────────────────────/Shell integrations/────────────────────/#
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
