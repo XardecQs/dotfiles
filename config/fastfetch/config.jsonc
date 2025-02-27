@@ -99,7 +99,7 @@
     },
     {
       "type": "datetime",
-      "format": "{weekday} {day-pretty} {month-name} de {year} | {hour-12-pretty}:{minute-pretty}",
+      "format": "{weekday} {day-in-month} {month-name} de {year} | {hour-12-pretty}:{minute-pretty}",
       "key": " Fecha",
       "keyColor": "34"
     },

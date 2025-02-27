@@ -1,71 +1,184 @@
+@import "/home/xardec/.cache/wal/colors-gtk.css";
+
 * {
-    font-family: "SF pro display", "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 600;
+    border-radius: 12px;
+    margin: 0px;
+    padding: 0px;
+    color: @color15;
+    transition-property: background-color;
+    transition-duration: 0.3s;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.25);
-    border: 1px solid aqua;
-    border-radius: 10px;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: @color0Alpha;
+    border: 2px solid @color9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-#hyprland-window,
+tooltip {
+    background-color: @color0;
+    border: 2px solid @color9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+tooltip label {
+    padding: 1px 2px;
+    color: @foreground;
+}
+
+#window,
 #custom-wallpaper,
 #clock,
 #battery,
-#cpu,
-#memory,
 #temperature,
-#network,
-#pulseaudio {
-    padding: 4px;
-}
-#taskbar,
-#taskbar button{
-    padding: 0;
-    margin: 0;
+#tray,
+#pulseaudio,
+#backlight {
+    margin: 3px;
+    padding: 2px 4px;
+    background-color: @color0Alpha;
+    border: 1px solid transparent;
 }
 
-#hyprland-window {
-    padding: 4px
+#custom-wallpaper:hover,
+#battery:hover,
+#temperature:hover,
+#tray button:hover,
+#pulseaudio:hover,
+#backlight:hover {
+    background-color: @color0Alpha;
+    border-color: @color9;
+}
+
+/* Taskbar */
+#taskbar {
+    margin: 2px;
+}
+
+#taskbar button {
+    margin: 2px;
+    padding: 1px;
+    background-color: @color0Alpha;
+}
+
+#taskbar button:hover {
+    background-color: @color9;
+    color: @color0;
+}
+
+#taskbar button.active {
+    background-color: @color9;
+}
+
+
+/* Workspaces */
+#workspaces {
+    padding: 2px 3px;
+    margin: 2px 4px;
+    border-radius: 20px;
+    background-color: @backgroundAlpha;
+}
+
+#workspaces button {
+    padding: 0px 3px;
+    margin: 1px;
+    border-radius: 20px;
+    color: @foregroundAlpha;
+}
+
+#workspaces button.active {
+    background-color: @color9;
+    color: @color0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#workspaces button:hover {
+    background-color: @color9;
+    color: @color0;
+}
+
+#workspaces button.focused {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 -3px @color15;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+    color: #ffffff;
+    animation: pulse 1s infinite alternate;
+}
+
+#temperature,
+#backlight,
+#pulseaudio,
+#battery,
+#clock {
+    font-weight: 700;
+}
+
+#window {
+    margin-left: 6px;
 }
 
 #clock {
-    border-radius: 10px;
+    color: #ffffff;
+    background-color: @color0Alpha;
+    margin-right: 6px;
 }
 
 #battery {
     color: #8ce00a;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+#battery.warning {
+    color: #ffb52a;
 }
 
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+#battery.critical {
+    color: #ff273f;
+    animation: blink 1s infinite;
 }
 
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.25);
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#pulseaudio{
-    color: #9a5feb
+#pulseaudio {
+    color: #0092ff;
 }
 
 #pulseaudio.muted {
-    color: #cacaca
+    color: #cacaca;
+    text-decoration: line-through;
 }
-  
+
+#backlight {
+    color: #ffd141;
+}
+
+#temperature {
+    color: #ff273f;
+}
+
+#temperature.critical {
+    animation: blink 1s infinite;
+}
+
+/* Animaciones */
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+@keyframes pulse {
+    from {
+        background-color: #eb4d4b;
+    }
+    to {
+        background-color: #ff6b6b;
+    }
+}
