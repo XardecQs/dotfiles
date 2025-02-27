@@ -1,135 +1,136 @@
 {
-    "logo": {
-    	"type": "kitty",
-    	"height": 18,
-    	"padding": {
-    		"top": 5,
-            "left":3
-    	}
+  "logo": {
+    "type": "kitty",
+    "height": 18,
+    "padding": {
+      "top": 5,
+      "left": 4,
+      "right": 4
+    }
+  },
+  "display": {
+    "separator": " -> "
+  },
+  "modules": [
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
     },
-    "display": {
-        "separator": " -> "
+    "break",
+    {
+      "type": "title",
+      "keyWidth": 10
     },
-    "modules": [
-	"break",
-        "break",
-	{
-            "type": "custom",
-            "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
-        },
-	"break",
-	{
-            "type": "title",
-            "keyWidth": 10
-        },
-        "break",
-        {
-            "type": "os",
-            "key": " OS",
-            "format":"{pretty-name}",
-            "keyColor": "32"
-        },
-        {
-            "type": "kernel",
-            "key": " Kernel",
-            "keyColor": "32",
-        },
-        {
-            "type": "host",
-            "key": " Machine",
-            "format": "{family} {name}",
-            "keyColor": "32",
-        },
-        {
-            "type": "cpu",
-            "key": " CPU",
-            "format": "{name} {#2}{freq-max}",
-            "keyColor": "32"
-        },
-        {
-            "type": "packages",
-            "key": " Paquetes",
-            "keyColor": "33",  
-        },
-        {
-            "type": "terminal",
-            "format": "{pretty-name}",
-            "key": " Terminal",
-            "keyColor": "33", 
-        },
-        {
-            "type": "shell",
-            "format":"{pretty-name} {#2}{version}",
-            "key": " Shell",
-            "keyColor": "33", 
-        },
-        {
-            "type": "memory",
-            "key": " RAM",
-            "format": "{used} / {total} ({percentage})",
-            "keyColor": "91" 
-        },
-        {
-            "type": "disk",
-            "key": "󰋊 {name}",
-            "format": "{size-used} / {size-total} ({size-percentage})",
-            "keyColor": "91", 
-        },
-        {
-            "type": "wm",
-            "key": " WM",
-            "format":"{2} {#2}{5}",
-            "keyColor": "95", 
-        },
-        {
-            "type": "cursor",
-            "key": " Cursor",
-            "keyColor": "95", 
-        },
-        {
-            "type": "terminalfont",
-            "key": " Terminal Font",
-            "keyColor": "95", 
-        },
-        {
-            "type": "uptime",
-            "key": " Tiempo Activo",
-            "keyColor": "34", 
-        },
-        {
-            "type": "datetime",
-            "format": "{weekday} {day-pretty} {month-name} de {year} | {hour-12-pretty}:{minute-pretty}",
-            "key": " Fecha",
-            "keyColor": "34", 
-        },
-        {
-            "type": "localip",
-            "key": "󰩟 IP Local",
-            "format": "{1}",
-            "keyColor": "34",
-        },
-        "break",
-        {
-            "type": "media",
-            "key": "󰝚 Media",
-            "keyColor": "36", 
-        },
-        {
-            "type": "player",
-            "key": " Reproductor",
-            "keyColor": "36", 
-        },
-        {
-            "type": "sound",
-            "key": "󱡬 Salida de Audio",
-            "keyColor": "36", 
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m  \u001b[91m  \u001b[92m  \u001b[93m  \u001b[94m  \u001b[95m  \u001b[96m  \u001b[97m"
-        },
-        "break",
-        "break"
-    ]
+    "break",
+    {
+      "type": "os",
+      "key": " OS",
+      "format": "{pretty-name}",
+      "keyColor": "32"
+    },
+    {
+      "type": "kernel",
+      "key": " Kernel",
+      "keyColor": "32"
+    },
+    {
+      "type": "host",
+      "key": " Machine",
+      "format": "{family} {name}",
+      "keyColor": "32"
+    },
+    {
+      "type": "cpu",
+      "key": " CPU",
+      "format": "{name} {#2}{freq-max}",
+      "keyColor": "32"
+    },
+    {
+      "type": "packages",
+      "key": " Paquetes",
+      "keyColor": "33"
+    },
+    {
+      "type": "terminal",
+      "format": "{pretty-name}",
+      "key": " Terminal",
+      "keyColor": "33"
+    },
+    {
+      "type": "shell",
+      "format": "{pretty-name} {#2}{version}",
+      "key": " Shell",
+      "keyColor": "33"
+    },
+    {
+      "type": "memory",
+      "key": " RAM",
+      "format": "{used} / {total} ({percentage})",
+      "keyColor": "91"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 {name}",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+      "keyColor": "91"
+    },
+    {
+      "type": "wm",
+      "key": " WM",
+      "format": "{2} {#2}{5}",
+      "keyColor": "95"
+    },
+    {
+      "type": "cursor",
+      "key": " Cursor",
+      "keyColor": "95"
+    },
+    {
+      "type": "terminalfont",
+      "key": " Terminal Font",
+      "keyColor": "95"
+    },
+    {
+      "type": "uptime",
+      "key": " Tiempo Activo",
+      "keyColor": "34"
+    },
+    {
+      "type": "datetime",
+      "format": "{weekday} {day-pretty} {month-name} de {year} | {hour-12-pretty}:{minute-pretty}",
+      "key": " Fecha",
+      "keyColor": "34"
+    },
+    {
+      "type": "localip",
+      "key": "󰩟 IP Local",
+      "format": "{1}",
+      "keyColor": "34"
+    },
+    "break",
+    {
+      "type": "media",
+      "key": "󰝚 Media",
+      "keyColor": "36"
+    },
+    {
+      "type": "player",
+      "key": " Reproductor",
+      "keyColor": "36"
+    },
+    {
+      "type": "sound",
+      "key": "󱡬 Salida de Audio",
+      "keyColor": "36"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m  \u001b[91m  \u001b[92m  \u001b[93m  \u001b[94m  \u001b[95m  \u001b[96m  \u001b[97m"
+    },
+    "break",
+    "break"
+  ]
 }

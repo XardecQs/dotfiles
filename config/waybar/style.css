@@ -6,19 +6,11 @@
 
 window#waybar {
     background-color: rgba(0, 0, 0, 0.25);
-    /*border: 1px solid aqua;*/
+    border: 1px solid aqua;
     border-radius: 10px;
     transition-property: background-color;
     transition-duration: .5s;
 }
-/*
-.modules-right,
-.modules-left,
-.modules-center {
-    background-color: rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-*/
 
 #hyprland-window,
 #custom-wallpaper,
@@ -46,7 +38,7 @@ window#waybar {
 }
 
 #battery {
-    color: #61bb46;
+    color: #8ce00a;
 }
 
 #workspaces button {
@@ -68,3 +60,12 @@ window#waybar {
 #workspaces button.urgent {
     background-color: #eb4d4b;
 }
+
+#pulseaudio{
+    color: #9a5feb
+}
+
+#pulseaudio.muted {
+    color: #cacaca
+}
+  
