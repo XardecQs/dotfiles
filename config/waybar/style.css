@@ -60,7 +60,8 @@ tooltip label {
 
 #taskbar button {
     margin: 2px;
-    padding: 1px;
+    padding: 0px 2px;
+    border-radius: 20px;
     background-color: @color0Alpha;
 }
 
@@ -175,4 +176,19 @@ tooltip label {
     100% {
         opacity: 1;
     }
+}
+
+#tray menu {
+  background-color: @color0;
+  border-color: @color9;
+}
+
+#tray label {
+  margin: 2px;
+  padding: 2px;
+  background-color: transparent;
+}
+
+#tray menu menuitem:hover {
+  background-color: @color9;
 }

@@ -52,12 +52,12 @@
     "format": "{:%a %d %b %y | %I:%M %p}"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon}   {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "on-scroll-up": "/home/xardec/.config/hypr/scripts/volume.sh up 1 -n",
     "on-scroll-down": "/home/xardec/.config/hypr/scripts/volume.sh down 1 -n",
-    "format-muted": " muted",
+    "format-muted": "  muted",
     "format-icons": {
       "headphone": "",
       "hands-free": "",

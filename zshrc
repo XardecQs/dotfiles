@@ -1,3 +1,19 @@
+#/────────────────────/package-check/────────────────────/#
+
+() {
+  local required_commands=(lsd reflector fzf zoxide)
+  local missing=()
+
+  for cmd in ${required_commands[@]}; do
+    command -v "$cmd" &>/dev/null || missing+=("$cmd")
+  done
+
+  if (( ${#missing[@]} )); then
+    echo "Instalando paquetes faltantes: ${missing[*]}"
+    sudo pacman -S --needed --noconfirm ${missing[*]}
+  fi
+}
+
 #/────────────────────/p10k-init/────────────────────/#
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
