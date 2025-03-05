@@ -3,13 +3,18 @@
     "type": "kitty",
     "height": 18,
     "padding": {
-      "top": 5,
+      "top": 6,
       "left": 4,
       "right": 4
     }
   },
   "display": {
-    "separator": " -> "
+    "separator": " -> ",
+    "bar": {
+      "charElapsed": "=",
+      "charTotal": "-",
+      "width": 12
+    }
   },
   "modules": [
     "break",
@@ -48,6 +53,12 @@
       "keyColor": "32"
     },
     {
+      "type": "battery",
+      "key": " Batería",
+      "format": "{model-name} {capacity} {10} {#2}{technology}",
+      "keyColor": "33"
+    },
+    {
       "type": "packages",
       "key": " Paquetes",
       "keyColor": "33"
@@ -73,7 +84,7 @@
     {
       "type": "disk",
       "key": "󰋊 {name}",
-      "format": "{size-used} / {size-total} ({size-percentage})",
+      "format": "{size-used} / {size-total} ({size-percentage}) {#2}| {Filesystem}",
       "keyColor": "91"
     },
     {
@@ -129,8 +140,6 @@
     {
       "type": "custom",
       "format": "\u001b[90m  \u001b[91m  \u001b[92m  \u001b[93m  \u001b[94m  \u001b[95m  \u001b[96m  \u001b[97m"
-    },
-    "break",
-    "break"
+    }
   ]
 }

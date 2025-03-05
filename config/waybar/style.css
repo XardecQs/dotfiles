@@ -144,6 +144,14 @@ tooltip label {
     animation: blink 1s infinite;
 }
 
+#battery.warning:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #pulseaudio {
     color: #0092ff;
 }

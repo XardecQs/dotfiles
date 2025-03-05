@@ -82,8 +82,10 @@ alias diff='diff --color=auto'
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mirrors="sudo reflector --verbose --country Peru,Chile,Ecuador,Brazil,US,Colombia,Argentina --protocol https --latest 25 --sort rate --save /etc/pacman.d/mirrorlist"
 alias fl='fzf-lovely'
-alias gparted='sudo -E gparted'
 alias cf='clear && fastfetch'
+alias cff='clear && fastfetch --config examples/13.jsonc'
+alias yays='yay -S'
+alias yayr='yay -Rns'
 
 #/────────────────────/bindkey/────────────────────/#
 
