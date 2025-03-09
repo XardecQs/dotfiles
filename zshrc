@@ -86,6 +86,11 @@ alias cff='clear && fastfetch --config examples/13.jsonc'
 alias yays='yay -S'
 alias yayr='yay -Rns'
 alias q='exit'
+alias syu='sudo pacman -Syu'
+alias codepwd='code $(pwd)'
+alias napwd='nautilus $(pwd) & disown'
+alias windows11='/home/xardec/Virtualizacion/Máquinas/Windows_11/windows-vm.sh & disown'
+alias ssu='sudo su'
 
 #/────────────────────/bindkey/────────────────────/#
 

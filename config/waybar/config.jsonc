@@ -36,7 +36,7 @@
   },
   "battery": {
     "interval": 1,
-    "full-at":"98",
+    "full-at":"100",
     "format": "{icon}   {capacity}%",
     "format-charging": "{icon}󱐌  {capacity}%",
     "format-charging-full":"  {capacity}%",
