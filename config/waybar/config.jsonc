@@ -5,6 +5,7 @@
   "margin-right": 10,
   "reload_style_on_change": true,
   "modules-left": [
+    "custom/power",
     "hyprland/window",
     "wlr/taskbar"
   ],
@@ -19,6 +20,12 @@
     "battery",
     "clock"
   ],
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click":"wlogout -m 192"
+  },
+  
   "hyprland/window": {
     "format": "{initialTitle}",
     "max-length": 35,
@@ -44,7 +51,7 @@
 		"full": 100,
     "normal": 98, 
     "warning": 30,
-		"critical": 15
+		"critical": 20
 	},
     "format-icons": [
       " ",

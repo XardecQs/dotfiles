@@ -93,6 +93,7 @@ alias windows11='/home/xardec/Virtualizacion/Máquinas/Windows_11/windows-vm.sh 
 alias ssu='sudo su'
 alias ordenar='/home/xardec/Proyectos/Scripts/sh/ordenar.sh'
 alias snvim='sudo nvim'
+alias dots='cd dot && codepwd && q'
 
 #/────────────────────/bindkey/────────────────────/#
 
