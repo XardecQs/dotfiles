@@ -28,7 +28,12 @@ button:focus, button:active, button:hover {
 	outline-style: none;
 }
 
-#lock {
+#empty {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#wallpaper {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
 }
 

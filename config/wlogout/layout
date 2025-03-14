@@ -1,20 +1,14 @@
 {
-    "label" : "wallpaper",
-    "action" : "/home/xardec/Proyectos/GitHub/simple-wallpaper-manager/wallpaper.sh 'Imagen aleatoria'",
-    "text" : "Random Wallpaper",
-    "keybind" : "l"
-}
-{
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "Hibernate",
-    "keybind" : "h"
-}
-{
     "label" : "logout",
     "action" : "hyprctl dispatch exit",
     "text" : "Logout",
     "keybind" : "e"
+}
+{
+    "label" : "wallpaper",
+    "action" : "/home/xardec/Proyectos/GitHub/simple-wallpaper-manager/wallpaper.sh 'Imagen aleatoria'",
+    "text" : "Random Wallpaper",
+    "keybind" : "w"
 }
 {
     "label" : "shutdown",
@@ -23,14 +17,17 @@
     "keybind" : "s"
 }
 {
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}
+{
     "label" : "suspend",
     "action" : "systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 {
-    "label" : "reboot",
-    "action" : "systemctl reboot",
-    "text" : "Reboot",
-    "keybind" : "r"
+    "label":"empty"
 }

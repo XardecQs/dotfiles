@@ -1,10 +1,10 @@
 @import "/home/xardec/.cache/wal/colors-gtk.css";
 
 * {
-    font-family: "SF Pro Display", "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "SF Pro Rounded", "SF Pro Display", "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 600;
-    border-radius: 12px;
+    border-radius: 20px;
     margin: 0px;
     padding: 0px;
     color: @color15;
@@ -13,13 +13,13 @@
 }
 
 window#waybar {
-    background-color: @color0Alpha;
-    border: 2px solid @color9;
+    background-color: transparent;
+    border: 2px solid @backgroundAlpha;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 tooltip {
-    background-color: @color0;
+    background-color: @background;
     border: 2px solid @color9;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -39,9 +39,9 @@ tooltip label {
 #pulseaudio,
 #backlight {
     margin: 3px;
-    padding: 2px 4px;
+    padding: 0px 6px;
     background-color: @color0Alpha;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
 }
 
 #custom-wallpaper:hover,
@@ -140,7 +140,7 @@ tooltip label {
 #clock {
     color: #ffffff;
     background-color: @color0Alpha;
-    margin-right: 6px;
+    margin-right: 3px;
 }
 
 #battery,
