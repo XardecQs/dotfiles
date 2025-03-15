@@ -1,19 +1,13 @@
-<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <linearGradient id="a" x2="1" gradientTransform="matrix(0 -45.2903 45.2903 0 85.3684 46.6452)" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#252525" offset="0"/>
-  <stop stop-color="#676767" offset="1"/>
- </linearGradient>
- <linearGradient id="b" x2="1" gradientTransform="matrix(3e-7 -22.7196 22.7196 3e-7 311.176 35.3598)" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#a7a7a7" offset="0"/>
-  <stop stop-color="#3b3b3b" offset="1"/>
- </linearGradient>
- <linearGradient id="c" x2="1" gradientTransform="matrix(0 -15.889 15.889 0 448.157 31.759)" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#006783" offset="0"/>
-  <stop stop-color="#13bee3" offset="1"/>
- </linearGradient>
- <path d="m46.645 12.677c0-6.249-5.073-11.322-11.322-11.322h-22.646c-6.249 0-11.322 5.073-11.322 11.322v22.646c0 6.249 5.073 11.322 11.322 11.322h22.646c6.249 0 11.322-5.073 11.322-11.322z" fill="url(#a)"/>
- <circle cx="23.824" cy="5.783" r="2.291" fill="#00f47c"/>
- <circle cx="24" cy="24" r="14.457" fill="#ebebeb"/>
- <circle cx="24" cy="24" r="11.36" fill="url(#b)"/>
- <circle cx="24" cy="24" r="10.22" fill="url(#c)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <path style="opacity:0.2" d="M 32,48.4 C 32,48.4 49,52.6 49,55.4 V 58.2 C 49,59.8 47.7,61 46.2,61 H 17.8 C 16.3,61 15,59.8 15,58.2 V 55.4 C 15,52.6 32,48.4 32,48.4 Z"/>
+ <path style="fill:#4f4f4f" d="M 32,47.4 C 32,47.4 49,51.6 49,54.4 V 57.2 C 49,58.751 47.736,60 46.167,60 H 17.833 C 16.264,60 15,58.751 15,57.2 V 54.4 C 15,51.6 32,47.4 32,47.4 Z"/>
+ <circle style="opacity:0.2" cx="32" cy="30" r="25"/>
+ <circle style="fill:#8e8e8e" cx="32" cy="29" r="25"/>
+ <circle style="fill:#4f4f4f" cx="32" cy="29" r="18"/>
+ <circle style="opacity:0.2" cx="32" cy="30" r="14"/>
+ <circle style="fill:#00b1c4" cx="32" cy="29" r="14"/>
+ <circle style="opacity:0.2" cx="32" cy="30" r="8"/>
+ <circle style="fill:#70f4ff" cx="32" cy="29" r="8"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 31.879,21 A 8,8 0 0 0 24,29 8,8 0 0 0 24.016,29.506 8,8 0 0 1 31.879,22 8,8 0 0 1 32,22 8,8 0 0 1 39.984,29.498 8,8 0 0 0 40,29 8,8 0 0 0 32,21 8,8 0 0 0 31.879,21 Z"/>
+ <path style="fill:#ffffff;opacity:0.2" d="M 32 4 A 25 25 0 0 0 7 29 A 25 25 0 0 0 7.0352 29.5 A 25 25 0 0 1 32 5 A 25 25 0 0 1 56.982 29.25 A 25 25 0 0 0 57 29 A 25 25 0 0 0 32 4 z"/>
 </svg>

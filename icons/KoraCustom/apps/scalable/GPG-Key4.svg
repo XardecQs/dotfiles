@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1.1">
- <rect style="opacity:0.2" width="40" height="40" x="4" y="5" rx="2" ry="2"/>
- <rect style="fill:#3b8b38" width="40" height="40" x="4" y="4" rx="2" ry="2"/>
- <circle style="fill-opacity:0.2" cx="36" cy="37" r="11"/>
- <circle style="fill:#8bc34a" cx="36" cy="36" r="11"/>
- <path style="fill:#ffffff;opacity:0.1" d="M 6 4 C 4.892 4 4 4.892 4 6 L 4 7 C 4 5.892 4.892 5 6 5 L 42 5 C 43.108 5 44 5.892 44 7 L 44 6 C 44 4.892 43.108 4 42 4 L 6 4 z"/>
- <g fill="#ffffff" transform="matrix(0.70711,-0.70711,0.70711,0.70711,14.272,3.4018)">
-  <rect width="4" height="10" x="-14" y="32"/>
-  <rect width="4" height="14" x="-42" y="-14" transform="rotate(-90)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1">
+ <rect style="opacity:0.2" width="56" height="56" x="4" y="5" rx="2.8" ry="2.8"/>
+ <rect style="fill:#3b8b38" width="56" height="56" x="4" y="4" rx="2.8" ry="2.8"/>
+ <path style="opacity:0.2" d="M 8.0001,36 A 10,10 0 0 1 18,26 10,10 0 0 1 22.403,27.028 L 39.429,10 H 44 V 14.571 L 42,16.571 V 22 H 36.571 L 34,24.571 V 30 H 28.571 L 26.969,31.602 A 10,10 0 0 1 28,36 10,10 0 0 1 18,46 10,10 0 0 1 8.0001,36 Z M 12,38 A 4,4 0 0 0 16,42 4,4 0 0 0 20,38 4,4 0 0 0 16,34 4,4 0 0 0 12,38 Z"/>
+ <path style="fill:#ffffff" d="M 8.0001,35 A 10,10 0 0 1 18,25 10,10 0 0 1 22.403,26.028 L 39.429,9.0001 H 44 V 13.571 L 42,15.571 V 21 H 36.571 L 34,23.571 V 29 H 28.571 L 26.969,30.602 A 10,10 0 0 1 28,35 10,10 0 0 1 18,45 10,10 0 0 1 8.0001,35 Z M 12,37 A 4,4 0 0 0 16,41 4,4 0 0 0 20,37 4,4 0 0 0 16,33 4,4 0 0 0 12,37 Z"/>
+ <circle style="fill-opacity:0.2" cx="48" cy="47" r="16"/>
+ <circle style="fill:#8bc34a" cx="48" cy="46" r="16"/>
+ <path style="fill:#ffffff;opacity:0.1" d="M 6.8008 4 C 5.2496 4 4 5.2496 4 6.8008 L 4 7.8008 C 4 6.2496 5.2496 5 6.8008 5 L 57.199 5 C 58.75 5 60 6.2496 60 7.8008 L 60 6.8008 C 60 5.2496 58.75 4 57.199 4 L 6.8008 4 z"/>
+ <g transform="rotate(-45,53.046,44.232)">
+  <rect style="fill:#ffffff" width="4" height="13" x="42" y="34"/>
+  <rect style="fill:#ffffff" width="4" height="18" x="-47" y="42" transform="rotate(-90)"/>
  </g>
- <path style="opacity:0.2" d="M 24,24 H 28 V 20 L 30,18 H 34 V 15 L 36,13 V 9 H 32 L 17,24 21,27 Z M 16,21 A 8,8 0 0 0 8,29 8,8 0 0 0 16,37 8,8 0 0 0 24,29 8,8 0 0 0 16,21 Z M 14,28 A 3,3 0 0 1 17,31 3,3 0 0 1 14,34 3,3 0 0 1 11,31 3,3 0 0 1 14,28 Z"/>
- <path style="fill:#ffffff" d="M 24,23 H 28 V 19 L 30,17 H 34 V 14 L 36,12 V 8 H 32 L 17,23 21,26 Z M 16,20 A 8,8 0 0 0 8,28 8,8 0 0 0 16,36 8,8 0 0 0 24,28 8,8 0 0 0 16,20 Z M 14,27 A 3,3 0 0 1 17,30 3,3 0 0 1 14,33 3,3 0 0 1 11,30 3,3 0 0 1 14,27 Z"/>
 </svg>

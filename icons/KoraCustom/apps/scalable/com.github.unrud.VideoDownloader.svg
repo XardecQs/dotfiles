@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1.1">
- <path style="opacity:0.2" d="m 4,8 v 33 h 3 v -3 h 3 v 3 h 29 v -3 h 3 v 3 h 3 V 8 h -3 v 3 H 39 V 8 H 10 v 3 H 7 V 8 Z m 3,6 h 3 v 3 H 7 Z m 32,0 h 3 v 3 H 39 Z M 7,20 h 3 v 3 H 7 Z m 32,0 h 3 v 3 H 39 Z M 7,26 h 3 v 3 H 7 Z m 32,0 h 3 v 3 H 39 Z M 7,32 h 3 v 3 H 7 Z m 32,0 h 3 v 3 h -3 z"/>
- <path style="fill:#ed5b36" d="m 4,7 v 33 h 3 v -3 h 3 v 3 h 29 v -3 h 3 v 3 h 3 V 7 h -3 v 3 H 39 V 7 H 10 v 3 H 7 V 7 Z m 3,6 h 3 v 3 H 7 Z m 32,0 h 3 v 3 H 39 Z M 7,19 h 3 v 3 H 7 Z m 32,0 h 3 v 3 H 39 Z M 7,25 h 3 v 3 H 7 Z m 32,0 h 3 v 3 H 39 Z M 7,31 h 3 v 3 H 7 Z m 32,0 h 3 v 3 h -3 z"/>
- <path style="opacity:0.2" d="M 24.5,35.25 16.25,27 h 16.5 z m 0,0"/>
- <path style="fill:#ffffff" d="M 24.5,34.25 16.25,26 h 16.5 z m 0,0"/>
- <path style="fill:#ffffff" d="m 20,22 h 9 v 6 h -9 z"/>
- <path style="fill:#ffffff;fill-opacity:0.68" d="m 20,22 h 3 v -3 h -3 z"/>
- <path style="fill:#ffffff" d="m 23,22 h 3 v -3 h -3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.88" d="m 26,22 h 3 v -3 h -3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.68" d="m 29,19 h -3 v -3 h 3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.54" d="m 26,19 h -3 v -3 h 3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.88" d="m 23,19 h -3 v -3 h 3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.19" d="m 29,16 h -3 v -3 h 3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.34" d="m 26,16 h -3 v -3 h 3 z"/>
- <path style="fill:#ffffff;fill-opacity:0.06" d="m 23,16 h -3 v -3 h 3 z"/>
- <path style="fill:#ffffff;opacity:0.2" d="M 4 7 L 4 8 L 7 8 L 7 7 L 4 7 z M 10 7 L 10 8 L 39 8 L 39 7 L 10 7 z M 42 7 L 42 8 L 45 8 L 45 7 L 42 7 z M 7 10 L 7 11 L 10 11 L 10 10 L 7 10 z M 39 10 L 39 11 L 42 11 L 42 10 L 39 10 z M 7 16 L 7 17 L 10 17 L 10 16 L 7 16 z M 39 16 L 39 17 L 42 17 L 42 16 L 39 16 z M 7 22 L 7 23 L 10 23 L 10 22 L 7 22 z M 39 22 L 39 23 L 42 23 L 42 22 L 39 22 z M 7 28 L 7 29 L 10 29 L 10 28 L 7 28 z M 39 28 L 39 29 L 42 29 L 42 28 L 39 28 z M 7 34 L 7 35 L 10 35 L 10 34 L 7 34 z M 39 34 L 39 35 L 42 35 L 42 34 L 39 34 z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1">
+ <path style="opacity:0.2" d="m 4,11 v 44 h 4 v -4 h 4 v 4 h 40 v -4 h 4 v 4 h 4 V 11 h -4 v 4 H 52 V 11 H 12 v 4 H 8 v -4 z m 4,8 h 4 v 4 H 8 Z m 44,0 h 4 v 4 H 52 Z M 8,27 h 4 v 4 H 8 Z m 44,0 h 4 v 4 H 52 Z M 8,35 h 4 v 4 H 8 Z m 44,0 h 4 v 4 H 52 Z M 8,43 h 4 v 4 H 8 Z m 44,0 h 4 v 4 h -4 z"/>
+ <path style="fill:#ed5b36" d="m 4,10 v 44 h 4 v -4 h 4 v 4 h 40 v -4 h 4 v 4 h 4 V 10 h -4 v 4 H 52 V 10 H 12 v 4 H 8 v -4 z m 4,8 h 4 v 4 H 8 Z m 44,0 h 4 v 4 H 52 Z M 8,26 h 4 v 4 H 8 Z m 44,0 h 4 v 4 H 52 Z M 8,34 h 4 v 4 H 8 Z m 44,0 h 4 v 4 H 52 Z M 8,42 h 4 v 4 H 8 Z m 44,0 h 4 v 4 h -4 z"/>
+ <path style="opacity:0.2" d="M 32,48.808 20.329268,37 h 23.341464 z"/>
+ <path style="fill:#ffffff" d="M 32,47.808 20.329268,36 h 23.341464 z"/>
+ <path style="fill:#ffffff" d="m 26,30 h 12 v 8.966536 H 26 Z"/>
+ <path style="fill:#ffffff;fill-opacity:0.68000034" d="m 26,30 h 4 v -4 h -4 z"/>
+ <path style="fill:#ffffff" d="m 30,30 h 4 v -4 h -4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.87999998" d="m 34,30 h 4 v -4 h -4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.68000034" d="m 38,26 h -4 v -4 h 4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.54000005" d="m 34,26 h -4 v -4 h 4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.87999998" d="m 30,26 h -4 v -4 h 4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.18999999" d="m 38,22 h -4 v -4 h 4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.34000017" d="m 34,22 h -4 v -4 h 4 z"/>
+ <path style="fill:#ffffff;fill-opacity:0.06000001" d="m 30,22 h -4 v -4 h 4 z"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 4 10 L 4 11 L 8 11 L 8 10 L 4 10 z M 12 10 L 12 11 L 52 11 L 52 10 L 12 10 z M 56 10 L 56 11 L 60 11 L 60 10 L 56 10 z M 8 14 L 8 15 L 12 15 L 12 14 L 8 14 z M 52 14 L 52 15 L 56 15 L 56 14 L 52 14 z M 8 22 L 8 23 L 12 23 L 12 22 L 8 22 z M 52 22 L 52 23 L 56 23 L 56 22 L 52 22 z M 8 30 L 8 31 L 12 31 L 12 30 L 8 30 z M 52 30 L 52 31 L 56 31 L 56 30 L 52 30 z M 8 38 L 8 39 L 12 39 L 12 38 L 8 38 z M 52 38 L 52 39 L 56 39 L 56 38 L 52 38 z M 8 46 L 8 47 L 12 47 L 12 46 L 8 46 z M 52 46 L 52 47 L 56 47 L 56 46 L 52 46 z"/>
 </svg>

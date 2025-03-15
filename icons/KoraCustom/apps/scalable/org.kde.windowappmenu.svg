@@ -1,8 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <path style="opacity:0.2" d="M 4,12 V 42.714844 C 4,43.981987 5.0188705,45 6.2851562,45 H 44 V 12 Z"/>
- <path style="fill:#e4e4e4" d="M 4,12.9 V 41.714844 C 4,42.981987 5.0188705,44 6.2851562,44 H 44 V 12.9 Z"/>
- <path style="fill:#636e73" d="M 6.2851562,4 C 5.0188705,4 4,5.0180134 4,6.2851562 V 13 H 44 V 4 Z"/>
- <path style="opacity:0.2" d="m 6,7 v 1 1 1 1 1 H 7 V 11 10 H 9 V 9 H 7 V 8 H 9 V 7 Z m 4,0 v 1 4 h 1 V 8 7 Z m 2,0 v 4 1 h 3 V 11 H 13 V 7 Z m 4,0 v 1 1 1 1 1 h 3 v -1 h -2 v -1 h 2 V 9 H 17 V 8 h 2 V 7 Z m 7,0 v 1 1 1 1 1 h 3 v -1 h -2 v -1 h 2 V 9 H 24 V 8 h 2 V 7 Z m 4,0 v 1 4 h 0.5 0.5 0.658203 L 30,11.060547 V 9.5 7.9394531 L 28.658203,7 H 28 27.5 Z m 4,0 v 1 4 h 1 V 8 7 Z m 2,0 v 1 h 1 v 4 h 1 V 8 h 1 V 7 Z m -5,1 h 0.341797 L 29,8.4609375 V 9.5 10.539063 L 28.341797,11 H 28 Z"/>
- <path style="fill:#ffffff" d="M 6 6 L 6 7 L 6 8 L 6 9 L 6 10 L 6 11 L 7 11 L 7 10 L 7 9 L 9 9 L 9 8 L 7 8 L 7 7 L 9 7 L 9 6 L 6 6 z M 10 6 L 10 7 L 10 11 L 11 11 L 11 7 L 11 6 L 10 6 z M 12 6 L 12 10 L 12 11 L 15 11 L 15 10 L 13 10 L 13 6 L 12 6 z M 16 6 L 16 7 L 16 8 L 16 9 L 16 10 L 16 11 L 19 11 L 19 10 L 17 10 L 17 9 L 19 9 L 19 8 L 17 8 L 17 7 L 19 7 L 19 6 L 16 6 z M 23 6 L 23 7 L 23 8 L 23 9 L 23 10 L 23 11 L 26 11 L 26 10 L 24 10 L 24 9 L 26 9 L 26 8 L 24 8 L 24 7 L 26 7 L 26 6 L 23 6 z M 27 6 L 27 7 L 27 11 L 27.5 11 L 28 11 L 28.658203 11 L 30 10.060547 L 30 8.5 L 30 6.9394531 L 28.658203 6 L 28 6 L 27.5 6 L 27 6 z M 31 6 L 31 7 L 31 11 L 32 11 L 32 7 L 32 6 L 31 6 z M 33 6 L 33 7 L 34 7 L 34 11 L 35 11 L 35 7 L 36 7 L 36 6 L 33 6 z M 28 7 L 28.341797 7 L 29 7.4609375 L 29 8.5 L 29 9.5390625 L 28.341797 10 L 28 10 L 28 7 z"/>
- <path style="fill:#ffffff;opacity:0.1" d="M 6.2851562 4 C 5.0188705 4 4 5.0180134 4 6.2851562 L 4 7.2851562 C 4 6.0180132 5.0188705 5 6.2851562 5 L 44 5 L 44 4 L 6.2851562 4 z"/>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <linearGradient id="a" x2="1" gradientTransform="matrix(0 -36.2165 36.2165 0 573.921 42.119)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#566069" offset="0"/>
+  <stop stop-color="#6c7884" offset="1"/>
+ </linearGradient>
+ <linearGradient id="b" x2="1" gradientTransform="matrix(-.30178 -32.3809 32.3809 -.30178 4749.49 -3.96934)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ccc" offset="0"/>
+  <stop stop-color="#f5f2f5" offset="1"/>
+ </linearGradient>
+ <path transform="matrix(1 0 0 -1 0 48)" d="m39.44 2.332c3.438 0 6.228 2.79 6.228 6.228v30.88c0 3.438-2.79 6.228-6.228 6.228h-30.88c-3.438 0-6.228-2.79-6.228-6.228v-30.88c0-3.438 2.79-6.228 6.228-6.228z" fill="url(#a)"/>
+ <g fill-rule="nonzero">
+  <path transform="matrix(1 0 0 -1 0 48)" d="m45.668 38.226v1.214c0 3.438-2.79 6.228-6.228 6.228h-30.88c-3.438 0-6.228-2.79-6.228-6.228v-1.214z" fill="url(#b)"/>
+  <path transform="translate(3 5.89578)" d="m6 6v5h1v-2h2v-1h-2v-1h2v-1zm4 0v5h1v-5zm2 0v5h3v-1h-2v-4zm4 0v5h3v-1h-2v-1h2v-1h-2v-1h2v-1zm7 0v5h3v-1h-2v-1h2v-1h-2v-1h2v-1zm4 0v5h1.658l1.342-.939v-3.122l-1.342-.939zm4 0v5h1v-5zm2 0v1h1v4h1v-4h1v-1zm-5 1h.342l.658.461v2.078l-.658.461h-.342z" fill="#fff"/>
+ </g>
 </svg>

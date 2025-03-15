@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <rect style="opacity:0.2" width="40" height="40" x="4" y="5" rx="2" ry="2"/>
- <rect style="fill:#3f99ed" width="40" height="40" x="4" y="4" rx="2" ry="2"/>
- <path style="opacity:0.2;fill:#ffffff" d="M 6,4 C 4.892,4 4,4.892 4,6 V 7 C 4,5.892 4.892,5 6,5 h 36 c 1.108,0 2,0.892 2,2 V 6 C 44,4.892 43.108,4 42,4 Z"/>
- <g style="font-size:12.20572472px;line-height:0%;letter-spacing:0px;word-spacing:0px;opacity:0.2" transform="matrix(1.0195649,0,0,0.98081054,0,0.99999901)">
-  <path d="m 19.616211,32.626077 h -7.825998 v 8.15652 H 7.8464845 V 20.391298 h 3.9027545 v 8.156519 h 7.866972 v -8.156519 h 3.923242 v 20.391299 h -3.923242 z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <rect style="opacity:0.2" width="56" height="56" x="4" y="5" rx="2.8" ry="2.8"/>
+ <rect style="fill:#3f99ed" width="56" height="56" x="4" y="4" rx="2.8" ry="2.8"/>
+ <g style="font-size:12.20572472px;line-height:0%;letter-spacing:0px;word-spacing:0px;opacity:0.2" transform="matrix(1.4019017,0,0,1.3731348,-1.0000004,-1.0000032)">
+  <path d="m 19.97287,32.04347 h -8.539314 v 8.739127 H 7.8464845 V 19.663039 h 3.5460975 v 8.739127 h 8.580288 v -8.739127 h 3.566583 V 40.782597 H 19.97287 Z"/>
  </g>
- <g style="font-size:12.20572472px;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#ffffff" transform="scale(1.0195649,0.98081054)">
-  <path style="fill:#ffffff" d="m 19.616211,32.626077 h -7.825998 v 8.15652 H 7.8464845 V 20.391298 h 3.9027545 v 8.156519 h 7.866972 v -8.156519 h 3.923242 v 20.391299 h -3.923242 z"/>
+ <g style="font-size:12.20572472px;line-height:0%;letter-spacing:0px;word-spacing:0px;fill:#ffffff" transform="matrix(1.4019017,0,0,1.3731348,-1.0000004,-2.0000032)">
+  <path style="fill:#ffffff" d="m 19.97287,32.04347 h -8.539314 v 8.739127 H 7.8464845 V 19.663039 h 3.5460975 v 8.739127 h 8.580288 v -8.739127 h 3.566583 V 40.782597 H 19.97287 Z"/>
  </g>
- <path style="opacity:0.2" d="m 38,8.999999 v 2 h -2 v 2 h 2 V 21 h 2 V 8.999999 Z"/>
- <path style="fill:#ffffff" d="m 38,8 v 2 h -2 v 2 h 2 v 8 h 2 V 8 Z"/>
+ <path style="opacity:0.2" d="m 53,9 v 3 h -3 v 3 h 3 v 11 h 3 V 9 Z"/>
+ <path style="fill:#ffffff" d="m 53,8 v 3 h -3 v 3 h 3 v 11 h 3 V 8 Z"/>
+ <path style="fill:#ffffff;opacity:0.2" d="M 6.8007812 4 C 5.2495813 4 4 5.2495813 4 6.8007812 L 4 7.8007812 C 4 6.2495813 5.2495813 5 6.8007812 5 L 57.199219 5 C 58.750419 5 60 6.2495813 60 7.8007812 L 60 6.8007812 C 60 5.2495813 58.750419 4 57.199219 4 L 6.8007812 4 z"/>
 </svg>

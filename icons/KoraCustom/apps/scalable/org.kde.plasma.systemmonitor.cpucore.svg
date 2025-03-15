@@ -1,12 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <rect style="opacity:0.2" width="40" height="40" x="4" y="5" rx="12" ry="12"/>
- <rect style="fill:#4f4f4f" width="40" height="40" x="4" y="4" rx="12" ry="12"/>
- <path style="opacity:0.1;fill:#ffffff" d="M 16,4 C 9.352,4 4,9.352 4,16 v 1 C 4,10.352 9.352,5 16,5 h 16 c 6.648,0 12,5.352 12,12 V 16 C 44,9.352 38.648,4 32,4 Z"/>
- <path style="opacity:0.3" d="M 9 10 L 9 38 L 15 38 L 15 10 L 9 10 z M 17 10 L 17 38 L 23 38 L 23 10 L 17 10 z M 25 10 L 25 38 L 31 38 L 31 10 L 25 10 z M 33 10 L 33 38 L 39 38 L 39 10 L 33 10 z"/>
- <rect style="fill:#0079de" width="6" height="12" x="25" y="26"/>
- <rect style="fill:#e84e36" width="6" height="18" x="33" y="20"/>
- <rect style="fill:#ffd827" width="6" height="4" x="9" y="34"/>
- <rect style="fill:#00d890" width="6" height="23" x="17" y="15"/>
- <path style="opacity:0.2" d="M 9 38 L 9 39 L 15 39 L 15 38 L 9 38 z M 17 38 L 17 39 L 23 39 L 23 38 L 17 38 z M 25 38 L 25 39 L 31 39 L 31 38 L 25 38 z M 33 38 L 33 39 L 39 39 L 39 38 L 33 38 z"/>
- <path style="opacity:0.2;fill:#ffffff" d="m 17,15 v 1 h 6 v -1 z m 16,5 v 1 h 6 v -1 z m -8,6 v 1 h 6 V 26 Z M 9,34 v 1 h 6 v -1 z"/>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <linearGradient id="a" x2="1" gradientTransform="matrix(0 -33.6872 33.6872 0 923.28 40.4502)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#484848" offset="0"/>
+  <stop stop-color="#696969" offset="1"/>
+ </linearGradient>
+ <path d="m39.44 45.668h-30.88c-3.438 0-6.228-2.79-6.228-6.228v-30.88c0-3.438 2.79-6.228 6.228-6.228h30.88c3.438 0 6.228 2.79 6.228 6.228v30.88c0 3.438-2.79 6.228-6.228 6.228z" fill="url(#a)"/>
+ <path transform="matrix(1.0834 0 0 1.0834 -2.0016 -2.0016)" d="m9 10v28h6v-28zm8 0v28h6v-28zm8 0v28h6v-28zm8 0v28h6v-28z" fill-opacity=".3" fill-rule="nonzero"/>
+ <g stroke-width="1.0834">
+  <path d="m25.0834 26.1668h6.5004v13.0008h-6.5004z" fill="#0079de"/>
+  <path d="m33.7506 19.6664h6.5004v19.5012h-6.5004z" fill="#e41f17"/>
+  <path d="m7.749 34.834h6.5004v4.3336h-6.5004z" fill="#ffd827"/>
+  <path d="m16.4162 14.2494h6.5004v24.9182h-6.5004z" fill="#00d85d"/>
+ </g>
 </svg>

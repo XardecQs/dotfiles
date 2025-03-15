@@ -1,14 +1,13 @@
-<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <linearGradient id="a" x2="1" gradientTransform="matrix(0 -43.336 43.336 0 24 45.668)" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#911620" stop-opacity=".99" offset="0"/>
-  <stop stop-color="#ff4c63" stop-opacity=".99" offset="1"/>
- </linearGradient>
- <path d="m39.44 2.332c3.438 0 6.228 2.79 6.228 6.228v30.88c0 3.438-2.79 6.228-6.228 6.228h-30.88c-3.438 0-6.228-2.79-6.228-6.228v-30.88c0-3.438 2.79-6.228 6.228-6.228z" fill="url(#a)"/>
- <g fill="#fff">
-  <path d="m7.937 7.826v5.007h1.001v-4.006h4.006v-1.001z" fill-opacity=".75" fill-rule="nonzero"/>
-  <path d="m7.937 40.174h5.007v-1.001h-4.006v-4.006h-1.001z" fill-opacity=".75" fill-rule="nonzero"/>
-  <path d="m40.486 39.374v-5.008h-1.002v4.006h-4.006v1.002z" fill-opacity=".75" fill-rule="nonzero"/>
-  <path d="m40.586 7.826h-5.008v1.001h4.006v4.006h1.002z" fill-opacity=".75" fill-rule="nonzero"/>
-  <circle cx="23.728" cy="24.489" r="5.571" fill-opacity=".77"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1">
+ <rect style="opacity:0.2" width="32" height="42" x="16" y="14" rx="2.5" ry="2.5"/>
+ <rect style="fill:#8e8e8e" width="32" height="42" x="16" y="13" rx="2.5" ry="2.5"/>
+ <rect style="opacity:0.2" width="52" height="40" x="6" y="10" rx="2.5" ry="2.5"/>
+ <path style="fill:#3f3f3f" d="M 6 44 L 6 46.5 C 6 47.885 7.115 49 8.5 49 L 55.5 49 C 56.885 49 58 47.885 58 46.5 L 58 44 L 6 44 z"/>
+ <path style="fill:#e5473e" d="M 8.5,9 C 7.115,9 6,10.115 6,11.5 V 44 H 58 V 11.5 C 58,10.115 56.885,9 55.5,9 Z"/>
+ <rect style="opacity:0.2" width="52" height="1" x="6" y="44"/>
+ <path style="fill:#ffffff;opacity:0.2" d="M 8.5 9 C 7.115 9 6 10.115 6 11.5 L 6 12.5 C 6 11.115 7.115 10 8.5 10 L 55.5 10 C 56.885 10 58 11.115 58 12.5 L 58 11.5 C 58 10.115 56.885 9 55.5 9 L 8.5 9 z"/>
+ <g transform="translate(-5.12154,5.587244)">
+  <path style="opacity:0.2" d="m 25.41754,15.413056 h 16.404 c 1.3,0 1.3,1.2857 1.3,1.2857 v 15.429 c 0,1.285 -1.3,1.285 -1.3,1.285 h -16.4 c 0,0 -1.3,0 -1.3,-1.2857 v -15.428 c 0,0 0,-1.286 1.3,-1.286 z m 25.704,2 v 15 l -8,-8 z"/>
+  <path style="fill:#ffffff" d="m 25.41754,14.413056 h 16.404 c 1.3,0 1.3,1.2857 1.3,1.2857 v 15.429 c 0,1.285 -1.3,1.285 -1.3,1.285 h -16.4 c 0,0 -1.3,0 -1.3,-1.2857 v -15.428 c 0,0 0,-1.286 1.3,-1.286 z m 25.704,2 v 15 l -8,-8 z"/>
  </g>
 </svg>

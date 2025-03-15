@@ -1,8 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <rect style="fill:#7e7e7e" width="32" height="40" x="-40" y="4" rx="2" ry="2" transform="scale(-1,1)"/>
- <circle style="fill:#555555" cx="-21" cy="-24" r="11" transform="matrix(0,-1,-1,0,0,0)"/>
- <circle style="fill:#4285f4" cx="-21" cy="-24" r="5" transform="matrix(0,-1,-1,0,0,0)"/>
- <path style="opacity:0.2" d="m 8,42 v 1 c 0,1.108 0.892,2 2,2 h 28 c 1.108,0 2,-0.892 2,-2 v -1 c 0,1.108 -0.892,2 -2,2 H 10 C 8.892,44 8,43.108 8,42 Z"/>
- <path style="opacity:0.2;fill:#ffffff" d="M 10,4 C 8.892,4 8,4.892 8,6 V 7 C 8,5.892 8.892,5 10,5 h 28 c 1.108,0 2,0.892 2,2 V 6 C 40,4.892 39.108,4 38,4 Z"/>
- <rect style="fill:#3f3f3f" width="26" height="4" x="11" y="36" rx="2" ry="2"/>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <linearGradient id="a" x2="1" gradientTransform="matrix(-.506203 -42 42 -.506203 388.014 40.6128)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#939393" offset="0"/>
+  <stop stop-color="#c5cfce" offset="1"/>
+ </linearGradient>
+ <path transform="translate(-.4455)" d="m37.02 1.667c2.783 0 5.039 2.257 5.039 5.04v34.586c0 2.783-2.256 5.04-5.039 5.04h-25.149c-2.783 0-5.039-2.257-5.039-5.04v-34.586c0-2.783 2.256-5.04 5.039-5.04z" fill="url(#a)" fill-rule="nonzero"/>
+ <circle cx="24" cy="37.69437" r="3.827" fill="#221c1c"/>
+ <g transform="matrix(0 -1 -1 0 0 -2.42587)">
+  <circle cx="-21" cy="-24" r="11" fill="#221c1c"/>
+  <circle cx="-21" cy="-24" r="5" fill="#0057ff"/>
+ </g>
 </svg>

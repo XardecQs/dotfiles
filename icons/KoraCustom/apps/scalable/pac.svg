@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <path style="opacity:0.2" d="M 16,42 12,38 H 7 C 5.338,38 4,36.662 4,35 V 11 C 4,9.338 5.338,8 7,8 H 41 C 42.662,8 44,9.338 44,11 V 35 C 44,36.662 42.662,38 41,38 H 36 L 32,42 Z"/>
- <path style="fill:#2c80c2" d="M 16,41 12,37 H 7 C 5.338,37 4,35.662 4,34 V 10 C 4,8.338 5.338,7 7,7 H 41 C 42.662,7 44,8.338 44,10 V 34 C 44,35.662 42.662,37 41,37 H 36 L 32,41 Z"/>
- <path style="opacity:0.5" d="M 20,35 15.5,31 H 10 V 13 H 38 V 31 H 32 L 28,35 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <path style="opacity:0.2" d="M 20,57 16,53 H 8 C 5.784,53 4,51.216 4,49 V 13 C 4,10.784 5.784,9 8,9 H 56 C 58.216,9 60,10.784 60,13 V 49 C 60,51.216 58.216,53 56,53 H 48 L 44,57 Z"/>
+ <path style="fill:#2c80c2" d="M 20,56 16,52 H 8 C 5.784,52 4,50.216 4,48 V 12 C 4,9.784 5.784,8 8,8 H 56 C 58.216,8 60,9.784 60,12 V 48 C 60,50.216 58.216,52 56,52 H 48 L 44,56 Z"/>
+ <path style="opacity:0.5" d="M 24,48 20,44 H 12 V 16 H 52 V 44 H 44 L 40,48 Z"/>
  <g style="fill:#f8c44e" transform="scale(1,-1)">
-  <rect width="2" height="3" x="15" y="-16"/>
-  <rect width="2" height="3" x="19" y="-16"/>
-  <rect width="2" height="3" x="23" y="-16"/>
-  <rect width="2" height="3" x="27" y="-16"/>
-  <rect width="2" height="3" x="31" y="-16"/>
+  <rect width="4" height="4" x="18" y="-20"/>
+  <rect width="4" height="4" x="24" y="-20"/>
+  <rect width="4" height="4" x="30" y="-20"/>
+  <rect width="4" height="4" x="36" y="-20"/>
+  <rect width="4" height="4" x="42" y="-20"/>
  </g>
- <path style="fill:#ffffff;opacity:0.2" d="M 7 7 C 5.338 7 4 8.338 4 10 L 4 11 C 4 9.338 5.338 8 7 8 L 41 8 C 42.662 8 44 9.338 44 11 L 44 10 C 44 8.338 42.662 7 41 7 L 7 7 z"/>
- <path style="opacity:0.2;fill:#ffffff" d="M 10,31 V 32 H 15.5 L 20,36 H 28 L 32,32 H 38 V 31 H 32 L 28,35 H 20 L 15.5,31 Z"/>
+ <path style="fill:#ffffff;opacity:0.2" d="M 8 8 C 5.784 8 4 9.784 4 12 L 4 13 C 4 10.784 5.784 9 8 9 L 56 9 C 58.216 9 60 10.784 60 13 L 60 12 C 60 9.784 58.216 8 56 8 L 8 8 z"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 12,44 V 45 H 20 L 24,49 H 40 L 44,45 H 52 V 44 H 44 L 40,48 H 24 L 20,44 Z"/>
 </svg>

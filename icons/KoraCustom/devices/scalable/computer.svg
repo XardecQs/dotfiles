@@ -1,9 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1.1">
- <rect style="opacity:0.2" width="24" height="32" x="12" y="11" rx="2" ry="2"/>
- <rect style="fill:#8e8e8e" width="24" height="32" x="12" y="10" rx="2" ry="2"/>
- <rect style="opacity:0.2" width="40" height="32" x="4" y="7" rx="2" ry="2"/>
- <path style="fill:#595959" d="M 4 34 L 4 36 C 4 37.108 4.892 38 6 38 L 42 38 C 43.108 38 44 37.108 44 36 L 44 34 L 4 34 z"/>
- <path style="fill:#333333" d="M 6,6 C 4.892,6 4,6.892 4,8 V 34 H 44 V 8 C 44,6.892 43.108,6 42,6 Z"/>
- <path style="fill:#ffffff;opacity:0.1" d="M 6 6 C 4.892 6 4 6.892 4 8 L 4 9 C 4 7.892 4.892 7 6 7 L 42 7 C 43.108 7 44 7.892 44 9 L 44 8 C 44 6.892 43.108 6 42 6 L 6 6 z"/>
- <rect style="opacity:0.1;fill:#ffffff" width="40" height="1" x="4" y="34"/>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+ <linearGradient id="a" x2="1" gradientTransform="matrix(0 -10.6328 10.6328 0 945.782 54.7328)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#6b6b6b" offset="0"/>
+  <stop stop-color="#474747" offset="1"/>
+ </linearGradient>
+ <linearGradient id="b" x2="1" gradientTransform="matrix(0 -31.5475 27.6386 0 436.556 33.8791)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#0084b6" offset="0"/>
+  <stop stop-color="#02eeff" offset="1"/>
+ </linearGradient>
+ <path transform="matrix(.75 0 0 .75 0 5.32088)" d="m24.462 40.093h15.076v7.9h-15.076z" fill="url(#a)" fill-rule="nonzero"/>
+ <path transform="matrix(1 0 0 1.13354 -.019583 -8.62106)" d="m35.789 43.478c0-.574-.528-1.039-1.178-1.039h-21.184c-.65 0-1.178.465-1.178 1.039v1.151c0 .573.528 1.039 1.178 1.039h21.184c.65 0 1.178-.466 1.178-1.039z" fill="#a4a4a4"/>
+ <g transform="translate(0 2.52247)">
+  <path d="m39.44 33.88h-30.88c-3.438 0-6.228-2.79-6.228-6.228v-19.092c0-3.438 2.79-6.228 6.228-6.228h30.88c3.438 0 6.228 2.79 6.228 6.228v19.092c0 3.438-2.79 6.228-6.228 6.228z" fill="url(#b)"/>
+  <path d="m39.44 33.88h-30.88c-3.438 0-6.228-2.79-6.228-6.228v-19.092c0-3.438 2.79-6.228 6.228-6.228h30.88c3.438 0 6.228 2.79 6.228 6.228v19.092c0 3.438-2.79 6.228-6.228 6.228zm0-1c2.886 0 5.228-2.342 5.228-5.228v-19.092c0-2.886-2.342-5.228-5.228-5.228h-30.88c-2.886 0-5.228 2.342-5.228 5.228v19.092c0 2.886 2.342 5.228 5.228 5.228z" fill="#3e3e3e"/>
+ </g>
 </svg>

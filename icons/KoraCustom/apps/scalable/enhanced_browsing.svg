@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <rect style="opacity:0.2" width="40" height="40" x="4" y="5" rx="12" ry="12"/>
- <rect style="fill:#6943b5" width="40" height="40" x="4" y="4" rx="12" ry="12"/>
- <path style="fill:#ffffff;opacity:0.1" d="M 16 4 C 9.352 4 4 9.352 4 16 L 4 17 C 4 10.352 9.352 5 16 5 L 32 5 C 38.648 5 44 10.352 44 17 L 44 16 C 44 9.352 38.648 4 32 4 L 16 4 z"/>
- <path style="opacity:0.2" d="m 32.908203,11.975701 a 2.0002,2.0002 0 0 0 -1.777344,1.310547 l -8,21 a 2.0004754,2.0004754 0 1 0 3.738282,1.425782 l 8,-21 A 2.0002,2.0002 0 0 0 32.908203,11.975701 Z M 17,18.999139 a 3,3 0 0 0 -3,3 3,3 0 0 0 3,3 3,3 0 0 0 3,-3 3,3 0 0 0 -3,-3 z m 0,12 a 3,3 0 0 0 -3,3 3,3 0 0 0 3,3 3,3 0 0 0 3,-3 3,3 0 0 0 -3,-3 z"/>
- <circle style="fill:#67d0ff" cx="17" cy="21" r="3"/>
- <circle style="fill:#67d0ff" cx="17" cy="33" r="3"/>
- <path style="fill:none;stroke:#67d0ff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round" d="M 25,34 33,13"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <rect style="opacity:0.2" width="56" height="56" x="4" y="5" rx="16.8" ry="16.8"/>
+ <rect style="fill:#6943b5" width="56" height="56" x="4" y="4" rx="16.8" ry="16.8"/>
+ <path style="opacity:0.2" d="m 44.984376,14.959179 a 3.0003,3.0003 0 0 0 -2.742188,1.855469 l -12,28 a 3.0010702,3.0010702 0 1 0 5.515624,2.367188 l 12,-28 A 3.0003,3.0003 0 0 0 44.984376,14.959179 Z M 22,24.998242 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 z m 0,16 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 z"/>
+ <circle style="fill:#67d0ff" cx="22" cy="28" r="4"/>
+ <circle style="fill:#67d0ff" cx="22" cy="44" r="4"/>
+ <path style="fill:none;stroke:#67d0ff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round" d="M 33,45 45,17"/>
+ <path style="opacity:0.1;fill:#ffffff" d="M 20.800781 4 C 11.493581 4 4 11.493581 4 20.800781 L 4 21.800781 C 4 12.493581 11.493581 5 20.800781 5 L 43.199219 5 C 52.506419 5 60 12.493581 60 21.800781 L 60 20.800781 C 60 11.493581 52.506419 4 43.199219 4 L 20.800781 4 z"/>
 </svg>

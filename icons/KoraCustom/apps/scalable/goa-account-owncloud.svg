@@ -1,31 +1,9 @@
-<svg clip-rule="evenodd" fill-rule="evenodd" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <linearGradient id="a" x2="1" gradientTransform="matrix(0 -43.3373 43.3373 0 302.963 45.6687)" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#1d2d44" offset="0"/>
-  <stop stop-color="#1b4889" offset="1"/>
- </linearGradient>
- <linearGradient id="b">
-  <stop stop-color="#eaeaea" offset="0"/>
-  <stop stop-color="#fcf9f9" offset="1"/>
- </linearGradient>
- <linearGradient id="c" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 555.268)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="d" x2="1" gradientTransform="matrix(33.0518 0 0 33.0518 6.53283 745.626)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="e" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 683.604)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="f" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 617.829)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="g" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 474.593)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="h" x2="1" gradientTransform="matrix(33.1276 0 0 33.1276 9.12866 883.445)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="i" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 796.199)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="j" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 981.143)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <linearGradient id="k" x2="1" gradientTransform="matrix(36.5213 0 0 36.5213 6.02811 682.655)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
- <path d="m45.668 8.56c0-3.438-2.79-6.228-6.228-6.228h-30.88c-3.438 0-6.228 2.79-6.228 6.228v30.88c0 3.438 2.79 6.228 6.228 6.228h30.88c3.438 0 6.228-2.79 6.228-6.228z" fill="url(#a)"/>
- <circle cx="16.388" cy="17.348" r="2.753" fill="url(#c)"/>
- <circle cx="11.341" cy="26.915" r="4.563" fill="url(#d)"/>
- <circle cx="17.029" cy="23.56" r="5.451" fill="url(#e)" stroke="#1c3c6b" stroke-width=".54"/>
- <circle cx="28.145" cy="21.35" r="5.042" fill="url(#f)"/>
- <circle cx="22.616" cy="17.428" r="5.042" fill="url(#g)" stroke="#1c3f73" stroke-width=".54"/>
- <circle cx="39.395" cy="28.862" r="2.616" fill="url(#h)"/>
- <g stroke-width=".54">
-  <circle cx="33.267" cy="26.643" r="5.451" fill="url(#i)" stroke="#1c3b67"/>
-  <circle cx="16.696" cy="29.14" r="2.884" fill="url(#j)" stroke="#1c375d"/>
-  <path d="m31.229 25.032c0 3.838-3.112 6.949-6.95 6.949-3.839 0-6.95-3.111-6.95-6.949s3.112-6.949 6.95-6.949 6.95 3.111 6.95 6.949z" fill="url(#k)" fill-rule="nonzero" stroke="#1c3964"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <circle style="opacity:0.2" cx="32" cy="33" r="28"/>
+ <circle style="fill:#008dda" cx="32" cy="32" r="28"/>
+ <path style="opacity:0.2" d="M 32,22 A 11,11 0 0 0 21.382812,30.138672 7,7 0 0 0 15,26 7,7 0 0 0 8,33 7,7 0 0 0 15,40 7,7 0 0 0 21.386719,35.841797 11,11 0 0 0 32,44 11,11 0 0 0 42.617188,35.861328 7,7 0 0 0 49,40 7,7 0 0 0 56,33 7,7 0 0 0 49,26 7,7 0 0 0 42.613281,30.158203 11,11 0 0 0 32,22 Z m 0.125,4 a 7,7 0 0 1 7,7 7,7 0 0 1 -7,7 7,7 0 0 1 -7,-7 7,7 0 0 1 7,-7 z M 15,30 a 3,3 0 0 1 3,3 3,3 0 0 1 -3,3 3,3 0 0 1 -3,-3 3,3 0 0 1 3,-3 z m 34,0 a 3,3 0 0 1 3,3 3,3 0 0 1 -3,3 3,3 0 0 1 -3,-3 3,3 0 0 1 3,-3 z"/>
+ <path style="fill:#ffffff" d="M 32 21 A 11 11 0 0 0 21 32 A 11 11 0 0 0 32 43 A 11 11 0 0 0 43 32 A 11 11 0 0 0 32 21 z M 32.125 25 A 7 7 0 0 1 39.125 32 A 7 7 0 0 1 32.125 39 A 7 7 0 0 1 25.125 32 A 7 7 0 0 1 32.125 25 z"/>
+ <path style="fill:#ffffff" d="M 15 25 A 7 7 0 0 0 8 32 A 7 7 0 0 0 15 39 A 7 7 0 0 0 22 32 A 7 7 0 0 0 15 25 z M 15 29 A 3 3 0 0 1 18 32 A 3 3 0 0 1 15 35 A 3 3 0 0 1 12 32 A 3 3 0 0 1 15 29 z"/>
+ <path style="fill:#ffffff" d="M 49 25 A 7 7 0 0 0 42 32 A 7 7 0 0 0 49 39 A 7 7 0 0 0 56 32 A 7 7 0 0 0 49 25 z M 49 29 A 3 3 0 0 1 52 32 A 3 3 0 0 1 49 35 A 3 3 0 0 1 46 32 A 3 3 0 0 1 49 29 z"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 32 4 A 28 28 0 0 0 4 32 A 28 28 0 0 0 4.0214844 32.585938 A 28 28 0 0 1 32 5 A 28 28 0 0 1 59.978516 32.414062 A 28 28 0 0 0 60 32 A 28 28 0 0 0 32 4 z"/>
 </svg>

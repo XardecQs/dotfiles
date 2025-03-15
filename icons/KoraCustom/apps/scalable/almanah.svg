@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1.1">
- <rect style="opacity:0.2" width="32" height="40" x="8" y="5" rx="2" ry="2"/>
- <rect style="fill:#c2352a" width="32" height="40" x="8" y="4" rx="2" ry="2"/>
- <path style="opacity:0.2" d="M 10 4 C 8.892 4 8 4.892 8 6 L 8 42 C 8 43.108 8.892 44 10 44 L 14 44 L 14 4 L 10 4 z"/>
- <path style="opacity:0.2;fill:#ffffff" d="M 10 4 C 8.892 4 8 4.892 8 6 L 8 7 C 8 5.892 8.892 5 10 5 L 38 5 C 39.108 5 40 5.892 40 7 L 40 6 C 40 4.892 39.108 4 38 4 L 10 4 z"/>
- <rect style="opacity:0.2" width="16" height="4" x="25" y="23" rx="1" ry="1"/>
- <rect style="fill:#d8d8d8" width="16" height="4" x="25" y="22" rx="1" ry="1"/>
- <path style="opacity:0.2" d="M 26,20 C 22,20 22,24 22,24 V 28 H 21 C 20,28 20,29 20,29 V 35 C 20,36 21,36 21,36 H 31 C 32,36 32,35 32,35 V 29 C 32,28 31,28 31,28 H 30 V 24 C 30,24 30,20 26,20 Z M 26,22 C 28,22 28,24 28,24 V 28 H 24 V 24 C 24,24 24,22 26,22 Z"/>
- <path style="fill:#fec006" d="M 26,19 C 22,19 22,23 22,23 V 27 H 21 C 20,27 20,28 20,28 V 34 C 20,35 21,35 21,35 H 31 C 32,35 32,34 32,34 V 28 C 32,27 31,27 31,27 H 30 V 23 C 30,23 30,19 26,19 Z M 26,21 C 28,21 28,23 28,23 V 27 H 24 V 23 C 24,23 24,21 26,21 Z"/>
- <rect style="fill:#999999" width="6" height="2" x="26" y="23" rx="1" ry=".989"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1">
+ <rect style="opacity:0.2" width="44" height="56" x="10" y="5" rx="3" ry="3"/>
+ <rect style="fill:#c2352a" width="44" height="56" x="10" y="4" rx="3" ry="3"/>
+ <path style="opacity:0.2" d="M 13 4 C 11.338 4 10 5.338 10 7 L 10 57 C 10 58.662 11.338 60 13 60 L 18 60 L 18 4 L 13 4 z"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 13 4 C 11.338 4 10 5.338 10 7 L 10 8 C 10 6.338 11.338 5 13 5 L 51 5 C 52.662 5 54 6.338 54 8 L 54 7 C 54 5.338 52.662 4 51 4 L 13 4 z"/>
+ <rect style="opacity:0.2" width="20" height="5" x="35" y="31" rx="1.5" ry="1.5"/>
+ <rect style="fill:#d8d8d8" width="20" height="5" x="35" y="30" rx="1.5" ry="1.5"/>
+ <path style="opacity:0.2" d="M 35,28 C 30,28 30,33 30,33 V 37 H 28.5 C 27,37 27,38.5 27,38.5 V 46.5 C 27,48 28.5,48 28.5,48 H 41.5 C 43,48 43,46.5 43,46.5 V 38.5 C 43,37 41.5,37 41.5,37 H 40 V 33 C 40,33 40,28 35,28 Z M 35,30 C 38,30 38,33 38,33 V 37 H 32 V 33 C 32,33 32,30 35,30 Z"/>
+ <path style="fill:#fec006" d="M 35,27 C 30,27 30,32 30,32 V 36 H 28.5 C 27,36 27,37.5 27,37.5 V 45.5 C 27,47 28.5,47 28.5,47 H 41.5 C 43,47 43,45.5 43,45.5 V 37.5 C 43,36 41.5,36 41.5,36 H 40 V 32 C 40,32 40,27 35,27 Z M 35,29 C 38,29 38,32 38,32 V 36 H 32 V 32 C 32,32 32,29 35,29 Z"/>
+ <rect style="fill:#999999" width="6" height="3" x="36" y="31" rx="1.5" ry="1.5"/>
 </svg>

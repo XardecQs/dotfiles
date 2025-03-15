@@ -29,5 +29,8 @@
     "keybind" : "u"
 }
 {
-    "label":"empty"
+    "label":"kill",
+    "action" : "hyprctl kill",
+    "text" : "Kill App",
+    "keybind" : "k"
 }

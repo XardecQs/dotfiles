@@ -41,6 +41,7 @@
     "on-click": "activate",
     "on-click-middle": "close"
   },
+
   "battery": {
     "interval": 1,
     "full-at":"100",

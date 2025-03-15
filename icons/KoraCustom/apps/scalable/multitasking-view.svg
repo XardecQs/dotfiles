@@ -1,8 +1,11 @@
-<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <linearGradient id="a" x2="1" gradientTransform="matrix(0 -45.5281 45.5281 0 136.545 46.764)" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#006783" offset="0"/>
-  <stop stop-color="#20ccff" offset="1"/>
- </linearGradient>
- <circle cx="24" cy="24" r="22.764" fill="url(#a)"/>
- <path d="m30.923 36.775h-18.461c-.843 0-1.154-.284-1.154-1.067v-7.471c0-.784.311-1.068 1.154-1.068h18.461c.847 0 1.154.284 1.154 1.068v7.471c0 .783-.307 1.067-1.154 1.067zm6.923-10.808h-9.231c-.838 0-1.153-.284-1.153-1.067v-10.673c0-.783.32-1.067 1.153-1.067h9.231c.839 0 1.154.284 1.154 1.067v10.673c0 .783-.316 1.067-1.154 1.067zm-13.846-1.202h-13.846c-.842 0-1.154-.284-1.154-1.067v-9.606c0-.783.312-1.067 1.154-1.067h13.846c.847 0 1.154.284 1.154 1.067v9.606c0 .783-.307 1.067-1.154 1.067z" fill="#fff" fill-opacity=".75" fill-rule="nonzero"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <rect style="opacity:0.2" width="56" height="48" x="4" y="9" rx="3" ry="3"/>
+ <rect style="fill:#1e88e5" width="56" height="48" x="4" y="8" rx="3" ry="3"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 7,8 C 5.338,8 4,9.338 4,11 l 0,1 C 4,10.338 5.338,9 7,9 l 50,0 c 1.66,0 3,1.338 3,3 l 0,-1 C 60,9.338 58.66,8 57,8 Z"/>
+ <rect style="opacity:0.2" width="28" height="20" x="36" y="14" rx="1.2" ry="1.2"/>
+ <rect style="fill:#ebebeb" width="28" height="20" x="36" y="13" rx="1.2" ry="1.2"/>
+ <rect style="opacity:0.2" width="28" height="20" x="18" y="40" rx="1.2" ry="1.2"/>
+ <rect style="fill:#ebebeb" width="28" height="20" x="18" y="39" rx="1.2" ry="1.2"/>
+ <rect style="opacity:0.2" width="28" height="20" x="0" y="14" rx="1.2" ry="1.2"/>
+ <rect style="fill:#ebebeb" width="28" height="20" x="0" y="13" rx="1.2" ry="1.2"/>
 </svg>

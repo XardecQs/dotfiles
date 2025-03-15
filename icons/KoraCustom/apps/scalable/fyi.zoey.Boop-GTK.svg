@@ -1,11 +1,11 @@
-<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <rect x="4" y="6" width="24" height="24" ry="3" style="opacity:.2"/>
- <rect x="4" y="5" width="24" height="24" ry="3" style="fill:#f5e03a"/>
- <rect x="11" y="12" width="24" height="24" ry="8" style="opacity:.2"/>
- <rect x="11" y="11" width="24" height="24" ry="8" style="fill:#f98413"/>
- <circle cx="32" cy="32" r="12" style="opacity:.2"/>
- <circle cx="32" cy="31" r="12" style="fill:#a821a3"/>
- <path d="m7 5c-1.662 0-3 1.338-3 3v1c0-1.662 1.338-3 3-3h18c1.662 0 3 1.338 3 3v-1c0-1.662-1.338-3-3-3h-18z" style="fill:#ffffff;opacity:.2"/>
- <path d="m19 11c-4.432 0-8 3.568-8 8v1c0-4.432 3.568-8 8-8h8c4.432 0 8 3.568 8 8v-1c0-4.432-3.568-8-8-8h-8z" style="fill:#ffffff;opacity:.2"/>
- <path d="M 32 19 A 12 12 0 0 0 20 31 A 12 12 0 0 0 20.019531 31.59375 A 12 12 0 0 1 32 20 A 12 12 0 0 1 43.980469 31.40625 A 12 12 0 0 0 44 31 A 12 12 0 0 0 32 19 z " style="fill:#ffffff;opacity:.2"/>
+<svg width="64" height="64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <rect x="3.999999" y="5.9999981" width="34" height="34" ry="4.0000014" style="opacity:.2"/>
+ <rect x="4" y="4.9999986" width="34" height="34" ry="4.0000014" style="fill:#f5e03a"/>
+ <rect x="14" y="14" width="34" height="34" ry="11.333334" style="opacity:.2"/>
+ <rect x="14.000001" y="13" width="34" height="34" ry="11.333334" style="fill:#f98413"/>
+ <circle cx="43" cy="42" r="17" style="opacity:.2"/>
+ <circle cx="43" cy="41" r="17" style="fill:#a821a3"/>
+ <path d="m8 5c-2.2160008 0-4 1.7839992-4 4v1c0-2.2160008 1.7839992-4 4-4h26c2.216001 0 4 1.7839992 4 4v-1c0-2.2160008-1.783999-4-4-4h-26z" style="fill:#ffffff;opacity:.2"/>
+ <path d="m25.333984 13c-6.278667 0-11.333984 5.055317-11.333984 11.333984v1c0-6.278667 5.055317-11.333984 11.333984-11.333984h11.332032c6.278667 0 11.333984 5.055317 11.333984 11.333984v-1c0-6.278667-5.055317-11.333984-11.333984-11.333984h-11.332032z" style="fill:#ffffff;opacity:.2"/>
+ <path d="M 43 24 A 17 17 0 0 0 26 41 A 17 17 0 0 0 26.021484 41.580078 A 17 17 0 0 1 43 25 A 17 17 0 0 1 59.978516 41.419922 A 17 17 0 0 0 60 41 A 17 17 0 0 0 43 24 z " style="fill:#ffffff;opacity:.2"/>
 </svg>

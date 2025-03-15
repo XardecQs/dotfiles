@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1.1">
- <path style="opacity:0.2" d="M 5,5 C 3.338,5 2,6.338 2,8 v 34 c 0,1.662 1.338,3 3,3 H 26 A 20,20 0 0 0 46,25 20,20 0 0 0 26,5 Z"/>
- <path style="fill:#00d177" d="M 5 4 C 3.338 4 2 5.338 2 7 L 2 41 C 2 42.662 3.338 44 5 44 L 26 44 A 20 20 0 0 0 46 24 A 20 20 0 0 0 26 4 L 5 4 z"/>
- <path style="opacity:0.1" d="m 13.5,16.99985 a 1.50015,1.50015 0 1 0 0,3 h 17 a 1.50015,1.50015 0 1 0 0,-3 z m 0,7 a 1.50015,1.50015 0 1 0 0,3 h 17 a 1.50015,1.50015 0 1 0 0,-3 z m 0,7 a 1.50015,1.50015 0 1 0 0,3 h 12 a 1.50015,1.50015 0 1 0 0,-3 z"/>
- <path style="fill:none;stroke:#3f3f3f;stroke-width:3;stroke-linecap:round" d="m 13.5,17.49985 h 17"/>
- <path style="fill:none;stroke:#3f3f3f;stroke-width:3;stroke-linecap:round" d="m 13.5,24.49985 h 17"/>
- <path style="fill:none;stroke:#3f3f3f;stroke-width:3;stroke-linecap:round" d="m 13.5,31.49985 h 12"/>
- <path style="fill:#ffffff;opacity:0.2" d="M 5 4 C 3.338 4 2 5.338 2 7 L 2 8 C 2 6.338 3.338 5 5 5 L 26 5 A 20 20 0 0 1 45.978516 24.582031 A 20 20 0 0 0 46 24 A 20 20 0 0 0 26 4 L 5 4 z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1.1">
+ <path style="opacity:0.2" d="M 5.2,5 C 2.8732,5 1,6.8732 1,9.2 V 56.8 C 1,59.1268 2.8732,61 5.2,61 H 35 C 50.463972,61 63,48.463972 63,33 63,17.536027 50.463972,5 35,5 Z"/>
+ <path style="fill:#00d177" d="M 5.2,4 C 2.8732,4 1,5.8732 1,8.2 V 55.8 C 1,58.1268 2.8732,60 5.2,60 H 35 C 50.463972,60 63,47.463972 63,32 63,16.536027 50.463972,4 35,4 Z"/>
+ <path style="opacity:0.1" d="m 17,20.9998 a 2.0002,2.0002 0 1 0 0,4 h 24 a 2.0002,2.0002 0 1 0 0,-4 z m 0,10 a 2.0002,2.0002 0 1 0 0,4 h 24 a 2.0002,2.0002 0 1 0 0,-4 z m 0,10 a 2.0002,2.0002 0 1 0 0,4 h 16 a 2.0002,2.0002 0 1 0 0,-4 z"/>
+ <path style="fill:none;stroke:#3f3f3f;stroke-width:4;stroke-linecap:round" d="M 17,21.9998 H 41"/>
+ <path style="fill:none;stroke:#3f3f3f;stroke-width:4;stroke-linecap:round" d="M 17,31.9998 H 41"/>
+ <path style="fill:none;stroke:#3f3f3f;stroke-width:4;stroke-linecap:round" d="M 17,41.9998 H 33"/>
+ <path style="opacity:0.2;fill:#ffffff" d="M 5.1992188 4 C 2.8724188 4 1 5.8724187 1 8.1992188 L 1 9.1992188 C 1 6.8724187 2.8724188 5 5.1992188 5 L 35 5 C 50.241333 5 62.628612 17.179662 62.982422 32.335938 C 62.988707 32.224106 63 32.113406 63 32 C 63 16.536027 50.463972 4 35 4 L 5.1992188 4 z"/>
 </svg>

@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" version="1">
- <rect style="fill:#e2d144" width="32" height="40" x="-40" y="-44" rx="2" ry="2" transform="matrix(0,-1,-1,0,0,0)"/>
- <path opacity=".2" d="m4 38v1c0 1.108 0.892 2 2 2h36c1.108 0 2-0.892 2-2v-1c0 1.108-0.892 2-2 2h-36c-1.108 0-2-0.892-2-2z"/>
- <rect style="opacity:0.5" width="2" height="16" x="12" y="8"/>
- <rect style="opacity:0.5" width="2" height="8" x="16" y="8"/>
- <rect style="opacity:0.5" width="2" height="8" x="20" y="8"/>
- <rect style="opacity:0.5" width="2" height="8" x="24" y="8"/>
- <rect style="opacity:0.5" width="2" height="8" x="28" y="8"/>
- <rect style="opacity:0.5" width="2" height="12" x="32" y="8"/>
- <rect style="opacity:0.5" width="2" height="8" x="36" y="8"/>
- <rect style="opacity:0.5" width="2" height="8" x="40" y="8"/>
- <path style="opacity:0.5" d="M 9 26 L 9 38 L 17 38 L 17 26 L 9 26 z M 11 28 L 15 28 L 15 36 L 11 36 L 11 28 z"/>
- <path fill="#fff" opacity=".2" d="m6 8c-1.108 0-2 0.892-2 2v1c0-1.108 0.892-2 2-2h36c1.108 0 2 0.892 2 2v-1c0-1.108-0.892-2-2-2h-36z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" version="1">
+ <rect style="opacity:0.2" width="45" height="56" x="-55" y="-60" rx="2.813" ry="2.8" transform="matrix(0,-1,-1,0,0,0)"/>
+ <rect style="fill:#e2d144" width="45" height="56" x="-54" y="-60" rx="2.813" ry="2.8" transform="matrix(0,-1,-1,0,0,0)"/>
+ <rect style="opacity:0.5" width="3" height="22" x="12" y="9"/>
+ <rect style="opacity:0.5" width="3" height="11" x="18" y="9"/>
+ <rect style="opacity:0.5" width="3" height="17" x="42" y="9"/>
+ <path style="opacity:0.5" d="M 8 34 L 8 51 L 19 51 L 19 34 L 8 34 z M 11 37 L 16 37 L 16 48 L 11 48 L 11 37 z"/>
+ <rect style="opacity:0.5" width="3" height="11" x="24" y="9"/>
+ <rect style="opacity:0.5" width="3" height="11" x="30" y="9"/>
+ <rect style="opacity:0.5" width="3" height="11" x="36" y="9"/>
+ <rect style="opacity:0.5" width="3" height="11" x="48" y="9"/>
+ <rect style="opacity:0.5" width="3" height="11" x="54" y="9"/>
+ <path style="fill:#ffffff;opacity:0.2" d="M 6.8007812 9 C 5.2495813 9 4 10.254375 4 11.8125 L 4 12.8125 C 4 11.254375 5.2495813 10 6.8007812 10 L 57.199219 10 C 58.750419 10 60 11.254375 60 12.8125 L 60 11.8125 C 60 10.254375 58.750419 9 57.199219 9 L 6.8007812 9 z"/>
 </svg>
