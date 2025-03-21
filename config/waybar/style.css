@@ -29,9 +29,9 @@ tooltip label {
     color: @foreground;
 }
 
+#custom-notification,
 #custom-power,
 #window,
-#custom-wallpaper,
 #clock,
 #battery,
 #temperature,
@@ -44,7 +44,7 @@ tooltip label {
     border: 0px solid transparent;
 }
 
-#custom-wallpaper:hover,
+#custom-notification:hover,
 #battery:hover,
 #temperature:hover,
 #tray button:hover,
@@ -125,7 +125,7 @@ tooltip label {
 
 #custom-power {
     margin: 6px 3px 6px 6px;
-    
+    padding: 2px 4px;
     border: 2px solid transparent;
     background-color: @color9;
 }
@@ -139,6 +139,12 @@ tooltip label {
 
 #clock {
     color: #ffffff;
+    background-color: @color0Alpha;
+}
+
+#custom-notification {
+    color: #ffffff;
+    padding: 2px 6px;
     background-color: @color0Alpha;
     margin-right: 3px;
 }
