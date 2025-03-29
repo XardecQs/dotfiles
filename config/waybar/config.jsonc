@@ -74,8 +74,8 @@
   },
   "pulseaudio": {
     "format": "{icon}   {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-bluetooth": "{icon} {volume}%  |  󰥉 {format_source}",
+    "format-bluetooth-muted": "  muted  |  󰥉 {format_source}",
     "on-scroll-up": "/home/xardec/.config/hypr/scripts/volume.sh up 1 -n",
     "on-scroll-down": "/home/xardec/.config/hypr/scripts/volume.sh down 1 -n",
     "format-muted": "  muted",
@@ -92,7 +92,8 @@
         " "
       ]
     },
-    "on-click": "/home/xardec/.config/hypr/scripts/volume.sh toggle-mute -n"
+    "on-click": "/home/xardec/.config/hypr/scripts/volume.sh toggle-mute -n",
+    "on-click-right": "pavucontrol"
   },
 
   "backlight": {
