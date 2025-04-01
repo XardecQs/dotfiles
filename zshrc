@@ -94,6 +94,8 @@ alias ssu='sudo su'
 alias ordenar='/home/xardec/Proyectos/Scripts/sh/ordenar.sh'
 alias snvim='sudo nvim'
 alias dots='cd dot && codepwd && q'
+alias start-waydroid='/home/xardec/Proyectos/GitHub/Miscellaneous-scripts/sh/start-waydroid.sh'
+alias quiensoy='whoami'
 
 #/────────────────────/bindkey/────────────────────/#
 

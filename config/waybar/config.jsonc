@@ -22,6 +22,18 @@
     "custom/notification"
   ],
 
+  "hyprland/workspaces": {
+    "format": "{windows}{icon}",
+    "format-icons": {
+      "magic":"Magic"
+    },
+    "show-special": true,
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "title<.*Spotify.*>": "   "
+    }
+  },
+    
   "custom/power": {
     "format": "⏻",
     "on-click":"wlogout -m 192"
@@ -31,7 +43,8 @@
     "format": "{initialTitle}",
     "max-length": 35,
     "rewrite": {
-      "": "󰣇   Arch Linux"
+      "": "󰣇   Arch Linux",
+      "Cargando…":"Nautilus"
     }
   },
   "wlr/taskbar": {
