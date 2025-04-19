@@ -30,7 +30,9 @@
     "show-special": true,
     "window-rewrite-default": "",
     "window-rewrite": {
-      "title<.*Spotify.*>": "   "
+      "title<.*Spotify.*>": "   ",
+      "title<.*Windows 11.*>": "   ",
+      "title<FreeRDP: localhost>": " 󰢹   "
     }
   },
     
@@ -82,6 +84,7 @@
   },
   "clock": {
     "tooltip": true,
+    "format-alt": "{:%a %d %b %y}",
     "format": "{:%I:%M %p}",
     "tooltip-format": "{:%a %d %b %y}"
   },

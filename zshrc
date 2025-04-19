@@ -1,19 +1,3 @@
-#/────────────────────/package-check/────────────────────/#
-
-() {
-  local required_commands=(lsd reflector fzf zoxide)
-  local missing=()
-
-  for cmd in ${required_commands[@]}; do
-    command -v "$cmd" &>/dev/null || missing+=("$cmd")
-  done
-
-  if (( ${#missing[@]} )); then
-    echo "Instalando paquetes faltantes: ${missing[*]}"
-    sudo pacman -S --needed --noconfirm ${missing[*]}
-  fi
-}
-
 #/────────────────────/p10k-init/────────────────────/#
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -87,13 +71,15 @@ alias yays='yay -S'
 alias yayr='yay -Rns'
 alias q='exit'
 alias syu='sudo pacman -Syu'
-alias codepwd='code $(pwd)'
-alias napwd='nautilus $(pwd) &> /dev/null & disown'
-alias windows11='/home/xardec/Virtualizacion/Máquinas/Windows_11/vm-manager.sh'
+alias codepwd='code "$(pwd)"'
+alias napwd='nautilus "$(pwd)" &> /dev/null & disown'
+alias windows11='/home/xardec/Virtualizacion/Máquinas/Windows_11_efi/vm-manager.sh'
 alias ssu='sudo su'
 alias ordenar='/home/xardec/Proyectos/Scripts/sh/ordenar.sh'
+alias desordenar='/home/xardec/Proyectos/Scripts/sh/desordenar.sh'
 alias snvim='sudo nvim'
 alias dots='cd dot && codepwd && q'
+alias dotsn='cd dot && nvim'
 alias start-waydroid='/home/xardec/Proyectos/GitHub/Miscellaneous-scripts/sh/start-waydroid.sh'
 alias quiensoy='whoami'
 
@@ -105,6 +91,8 @@ bindkey '^H' backward-kill-word
 bindkey "^[[3~" delete-char
 
 #/────────────────────/Shell integrations/────────────────────/#
+
+export EDITOR=nvim
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
