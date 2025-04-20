@@ -1,36 +1,36 @@
 {
     "label" : "logout",
     "action" : "hyprctl dispatch exit",
-    "text" : "Logout",
+    "text" : "Cerrar sesión",
     "keybind" : "e"
 }
 {
     "label" : "wallpaper",
     "action" : "/home/xardec/Proyectos/GitHub/simple-wallpaper-manager/wallpaper.sh 'Imagen aleatoria'",
-    "text" : "Random Wallpaper",
+    "text" : "Wallpaper aleatorio",
     "keybind" : "w"
 }
 {
     "label" : "shutdown",
     "action" : "systemctl poweroff",
-    "text" : "Shutdown",
+    "text" : "Apagar",
     "keybind" : "s"
 }
 {
     "label" : "reboot",
     "action" : "systemctl reboot",
-    "text" : "Reboot",
+    "text" : "Reiniciar",
     "keybind" : "r"
 }
 {
     "label" : "suspend",
     "action" : "systemctl suspend",
-    "text" : "Suspend",
+    "text" : "Suspender",
     "keybind" : "u"
 }
 {
     "label":"kill",
     "action" : "hyprctl kill",
-    "text" : "Kill App",
+    "text" : "Matar programa",
     "keybind" : "k"
 }

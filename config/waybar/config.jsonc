@@ -109,7 +109,7 @@
       ]
     },
     "on-click": "/home/xardec/.config/hypr/scripts/volume.sh toggle-mute -n",
-    "on-click-right": "pavucontrol"
+    "on-click-right": "pwvucontrol"
   },
 
   "backlight": {
