@@ -38,7 +38,7 @@
     
   "custom/power": {
     "format": "⏻",
-    "on-click":"wlogout -m 192"
+    "on-click":"wlogout -m 150"
   },
   
   "hyprland/window": {
@@ -46,7 +46,8 @@
     "max-length": 35,
     "rewrite": {
       "": "󰣇   Arch Linux",
-      "Cargando…":"Nautilus"
+      "Cargando…":"Nautilus",
+      "MATLAB R2016a":"   MATLAB 2016"
     }
   },
   "wlr/taskbar": {
