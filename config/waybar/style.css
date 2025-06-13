@@ -1,17 +1,18 @@
 @import "/home/xardec/.cache/wal/colors-gtk.css";
 
+/* ===== RESET GENERAL ===== */
 * {
-    font-family: "SF Pro Rounded", "SF Pro Display", "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "SF Pro Rounded", "JetBrainsMono Nerd Font", Roboto, sans-serif;
     font-size: 12px;
     font-weight: 600;
     border-radius: 20px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     color: @color15;
-    transition-property: background-color;
-    transition-duration: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
+/* ===== ESTRUCTURA PRINCIPAL ===== */
 window#waybar {
     background-color: transparent;
     border: 2px solid @backgroundAlpha;
@@ -29,6 +30,15 @@ tooltip label {
     color: @foreground;
 }
 
+/* ===== CLASE BASE PARA MÓDULOS ===== */
+.module {
+    margin: 3px;
+    padding: 0 6px;
+    background-color: @color0Alpha;
+    border: 0 solid transparent;
+}
+
+/* ===== APLICAR CLASE MANUALMENTE ===== */
 #custom-notification,
 #custom-power,
 #window,
@@ -39,21 +49,32 @@ tooltip label {
 #pulseaudio,
 #backlight {
     margin: 3px;
-    padding: 0px 6px;
+    padding: 0 6px;
     background-color: @color0Alpha;
-    border: 0px solid transparent;
+    border: 0 solid transparent;
 }
 
+#custom-power,
+#temperature,
+#backlight,
+#pulseaudio,
+#battery,
+#clock {
+    font-weight: 700;
+}
+
+/* ===== COMPORTAMIENTOS HOVER ===== */
 #custom-notification:hover,
 #battery:hover,
 #temperature:hover,
 #tray button:hover,
 #pulseaudio:hover,
 #backlight:hover {
-    background-color: @color0Alpha;
+    background-color: @color9Alpha;
     border-color: @color9;
 }
 
+/* ===== COMPONENTES ESPECÍFICOS ===== */
 /* Taskbar */
 #taskbar {
     margin: 2px;
@@ -61,8 +82,7 @@ tooltip label {
 
 #taskbar button {
     margin: 2px;
-    padding: 0px 2px;
-    border-radius: 20px;
+    padding: 0 2px;
     background-color: @color0Alpha;
 }
 
@@ -75,19 +95,16 @@ tooltip label {
     background-color: @color9;
 }
 
-
 /* Workspaces */
 #workspaces {
     padding: 2px 3px;
     margin: 2px 4px;
-    border-radius: 20px;
     background-color: @backgroundAlpha;
 }
 
 #workspaces button {
-    padding: 0px 3px;
+    padding: 0 3px;
     margin: 1px;
-    border-radius: 20px;
     color: @foreground;
 }
 
@@ -103,7 +120,6 @@ tooltip label {
 }
 
 #workspaces button.focused {
-    border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 -3px @color15;
 }
@@ -114,64 +130,39 @@ tooltip label {
     animation: blink 1s infinite;
 }
 
-#custom-power,
-#temperature,
-#backlight,
-#pulseaudio,
-#battery,
-#clock {
-    font-weight: 700;
-}
-
+/* Power Button */
 #custom-power {
     margin: 6px 3px 6px 6px;
     padding: 2px 4px;
-    border: 2px solid transparent;
     background-color: @color9;
 }
 
 #custom-power:hover {
-    margin: 6px 3px 6px 6px;
-    color: @background;
-    border: 2px solid transparent;
     background-color: @foreground;
+    color: @background;
 }
 
+/* ===== ESTILOS ESPECÍFICOS ===== */
 #clock {
     color: #ffffff;
-    background-color: @color0Alpha;
-}
-
-#custom-notification {
-    color: #ffffff;
-    padding: 2px 6px;
-    background-color: @color0Alpha;
-    margin-right: 3px;
 }
 
 #battery,
-#battery.charging,
-#battery.warning.charging,
+#battery.charging, 
+#battery.warning.charging, 
 #battery.critical.charging {
     color: #8ce00a;
     animation: none;
 }
 
-#battery.warning {
+#battery.warning:not(.charging) {
     color: #ffb52a;
+    animation: blink 0.5s linear infinite alternate;
 }
 
-#battery.critical {
+#battery.critical:not(.charging) {
     color: #ff273f;
     animation: blink 1s infinite;
-}
-
-#battery.warning:not(.charging) {
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #pulseaudio {
@@ -195,30 +186,27 @@ tooltip label {
     animation: blink 1s infinite alternate;
 }
 
-/* Animaciones */
+/* ===== ANIMACIONES ===== */
 @keyframes blink {
-    0% {
-        opacity: 1;
+    0% { 
+        opacity: 1; 
     }
-    50% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
+    50% { 
+        opacity: 0.6; 
     }
 }
 
+/* ===== TRAY ===== */
 #tray menu {
-  background-color: @color0;
-  border-color: @color9;
-}
-
-#tray label {
-  margin: 2px;
-  padding: 2px;
-  background-color: transparent;
+    background-color: @color0;
+    border-color: @color9;
 }
 
 #tray menu menuitem:hover {
-  background-color: @color9;
+    background-color: @color9;
+}
+
+#tray label {
+    margin: 2px;
+    padding: 2px;
 }

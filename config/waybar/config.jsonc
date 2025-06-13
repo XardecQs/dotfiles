@@ -4,14 +4,17 @@
   "margin-left": 10,
   "margin-right": 10,
   "reload_style_on_change": true,
+  
   "modules-left": [
     "custom/power",
     "hyprland/window",
     "wlr/taskbar"
   ],
+  
   "modules-center": [
     "hyprland/workspaces"
   ],
+  
   "modules-right": [
     "tray",
     "temperature",
@@ -24,32 +27,42 @@
 
   "hyprland/workspaces": {
     "format": "{windows}{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
-      "magic":"Magic"
+      "magic": "Magic"
     },
     "show-special": true,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
     "window-rewrite-default": "",
     "window-rewrite": {
       "title<.*Spotify.*>": "   ",
-      "title<.*Windows 11.*>": "   ",
-      "title<FreeRDP: localhost>": " 󰢹   "
+      "title<.*Windows 11.*>": "   ",
+      "title<FreeRDP: localhost>": "    "
     }
   },
     
   "custom/power": {
     "format": "⏻",
-    "on-click":"wlogout -m 150"
+    "on-click": "wlogout -m 150"
   },
   
   "hyprland/window": {
     "format": "{initialTitle}",
     "max-length": 35,
     "rewrite": {
-      "": "󰣇   Arch Linux",
-      "Cargando…":"Nautilus",
-      "MATLAB R2016a":"   MATLAB 2016"
+      "": "    Arch Linux",
+      "Cargando...": "    Nautilus",
+      "MATLAB R2016a": "    MATLAB 2016"
     }
   },
+  
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 21,
@@ -60,17 +73,15 @@
   },
 
   "battery": {
-    "interval": 1,
-    "full-at":"100",
+    "interval": 3,
+    "full-at": 98,
     "format": "{icon}   {capacity}%",
-    "format-charging": "{icon}󱐌  {capacity}%",
-    "format-charging-full":"  {capacity}%",
+    "format-charging": "{icon}    {capacity}%",
+    "format-charging-full": "   {capacity}%",
     "states": {
-		"full": 100,
-    "normal": 98, 
-    "warning": 30,
-		"critical": 20
-	},
+      "warning": 30,
+      "critical": 15
+    },
     "format-icons": [
       " ",
       " ",
@@ -79,22 +90,22 @@
       " "
     ]
   },
+  
   "tray": {
     "icon-size": 21,
     "spacing": 10
   },
+  
   "clock": {
     "tooltip": true,
     "format-alt": "{:%a %d %b %y}",
     "format": "{:%I:%M %p}",
-    "tooltip-format": "{:%a %d %b %y}"
+    "tooltip-format": "{:%A, %d %B %Y | %I:%M}"
   },
+  
   "pulseaudio": {
     "format": "{icon}   {volume}%",
     "format-bluetooth": "{icon} {volume}%  |  󰥉 {format_source}",
-    "format-bluetooth-muted": "  muted  |  󰥉 {format_source}",
-    "on-scroll-up": "/home/xardec/.config/hypr/scripts/volume.sh up 1 -n",
-    "on-scroll-down": "/home/xardec/.config/hypr/scripts/volume.sh down 1 -n",
     "format-muted": "  muted",
     "format-icons": {
       "headphone": " ",
@@ -110,16 +121,15 @@
       ]
     },
     "on-click": "/home/xardec/.config/hypr/scripts/volume.sh toggle-mute -n",
-    "on-click-right": "pwvucontrol"
+    "on-click-right": "pwvucontrol",
+    "on-scroll-up": "/home/xardec/.config/hypr/scripts/volume.sh up 1 -n",
+    "on-scroll-down": "/home/xardec/.config/hypr/scripts/volume.sh down 1 -n"
   },
 
   "backlight": {
-	"device": "intel_backlight",
-  "tooltip-format": "Brillo",
-  "on-scroll-up": "/home/xardec/.config/hypr/scripts/brillo.sh up 2",
-  "on-scroll-down": "/home/xardec/.config/hypr/scripts/brillo.sh down 2",
-	"format": "{icon}   {percent}%",
-	"format-icons": [
+    "device": "intel_backlight",
+    "format": "{icon}   {percent}%",
+    "format-icons": [
     "󱩎 ",
     "󱩏 ",
     "󱩐 ",
@@ -130,32 +140,34 @@
     "󱩕 ",
     "󱩖 ",
     "󱩖 "
-  ]
+  ],
+    "on-scroll-up": "/home/xardec/.config/hypr/scripts/brillo.sh up 3",
+    "on-scroll-down": "/home/xardec/.config/hypr/scripts/brillo.sh down 3"
   },
 
   "temperature": {
-     "tooltip-format": "Temperatura",
-     "tooltip": false
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C",
+    "tooltip": false
   },
 
   "custom/notification": {
-    "tooltip": false,
-    "format": "{} {icon}",
-    "format-icons": {
-      "notification": " <span foreground='red'><sup></sup></span>",
-      "none": " ",
-      "dnd-notification": " <span foreground='red'><sup></sup></span>",
-      "dnd-none": " ",
-      "inhibited-notification": " <span foreground='red'><sup></sup></span>",
-      "inhibited-none": " ",
-      "dnd-inhibited-notification": " <span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": " "
-    },
+    "format": "{icon}",
     "return-type": "json",
-    "exec-if": "which swaync-client",
+    "exec-if": "command -v swaync-client",
     "exec": "swaync-client -swb",
+    "exec-fallback": "echo '{\"text\":\"\"}'",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true
+    "format-icons": {
+      "notification": " <sup></sup>",
+      "none": "",
+      "dnd-notification": " <sup></sup>",
+      "dnd-none": "",
+      "inhibited-notification": " <sup></sup>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": " <sup></sup>",
+      "dnd-inhibited-none": ""
+    }
   }
 }
