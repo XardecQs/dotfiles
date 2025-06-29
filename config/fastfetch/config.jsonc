@@ -53,6 +53,12 @@
       "keyColor": "32"
     },
     {
+      "type": "gpu",
+      "key": " GPU",
+      "format": "{name} {#2}{6}",
+      "keyColor": "32"
+    },
+    {
       "type": "battery",
       "key": " Batería",
       "format": "{model-name} {capacity} {10} {#2}{technology}",

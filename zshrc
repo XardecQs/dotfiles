@@ -19,7 +19,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -l --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --color=always $realpath'
 
 #/────────────────────/History/────────────────────/#
 
