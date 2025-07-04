@@ -90,7 +90,7 @@
     {
       "type": "disk",
       "key": "󰋊 {name}",
-      "format": "{size-used} / {size-total} ({size-percentage}) {#2}| {Filesystem}",
+      "format": "{size-used} / {size-total} ({size-percentage}) {#2}| {Filesystem} ({mountpoint})",
       "keyColor": "91"
     },
     {
