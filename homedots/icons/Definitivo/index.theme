@@ -1,12 +1,18 @@
 [Icon Theme]
-Name=TemaDefinitivo
+Name=Definitivo
 Comment=Tema personalizado
 Inherits=Papirus-Dark,Papirus,hicolor
-#Inherits=Adwaitaru,Papirus,breeze-dark,hicolor
 
 FollowsColorScheme=true
 
-Directories=places/scalable,places/symbolic,apps/scalable
+Directories=places/scalable,places/symbolic,apps/scalable,mimetypes/scalable
+
+[mimetypes/scalable]
+Context=Mimetypes
+Size=128
+MinSize=32
+MaxSize=512
+Type=Scalable
 
 [places/symbolic]
 Context=Places
@@ -23,7 +29,7 @@ MaxSize=512
 Type=Scalable
 
 [apps/scalable]
-Context=Places
+Context=Apps
 Size=128
 MinSize=32
 MaxSize=512
