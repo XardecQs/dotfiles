@@ -4,6 +4,7 @@
 #/────────────────────/Environment Detection/────────────────────/#
 export IS_NIXOS=${IS_NIXOS:-$(test -f /etc/NIXOS && echo "1" || echo "0")}
 export IS_TERMUX=${IS_TERMUX:-$(test -d /data/data/com.termux && echo "1" || echo "0")}
+export IS_WSL=${IS_WSL:-$(test -f /proc/version && grep -qi microsoft /proc/version && echo "1" || echo "0")}
 
 #/────────────────────/p10k-instant-prompt/────────────────────/#
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -22,6 +23,10 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz compinit
 compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 
+# Word selection style (like bash)
+autoload -U select-word-style
+select-word-style bash
+
 zinit cdreplay -q
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' menu select
@@ -29,7 +34,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%F{blue}-- %d --%f'
 
-# FZF tab completion preview
+# FZF tab completion
+zstyle ':fzf-tab:*' fzf-flags --height=55% --border
 if (( $+commands[lsd] )); then
   zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --color=always --tree --depth 2 $realpath 2>/dev/null || exa --color=always --tree --level=2 $realpath 2>/dev/null || ls --color=always $realpath'
 else
@@ -75,6 +81,11 @@ fi
 # Zoxide
 if (( $+commands[zoxide] )); then
   eval "$(zoxide init --cmd cd zsh)"
+fi
+
+# Direnv
+if (( $+commands[direnv] )); then
+  eval "$(direnv hook zsh)"
 fi
 
 #/────────────────────/Plugins/────────────────────/#
@@ -126,16 +137,20 @@ alias ga='git add'
 alias gc='git commit'
 alias gs='git status'
 alias gl='git log --oneline --graph'
+alias gd='git diff'
 
 # Package management (platform-specific)
 if [[ $IS_NIXOS == "1" ]]; then
   alias update='sudo nixos-rebuild switch --flake ~/.dotfiles#$(hostname)'
   alias cleanup='sudo nix-collect-garbage -d'
+  alias nix-shell='nix-shell --run zsh'
 elif [[ $IS_TERMUX == "1" ]]; then
   alias update='pkg update && pkg upgrade'
 else
-  alias update='sudo nala update && sudo nala upgrade'
+  alias update='sudo apt update && sudo apt upgrade'
   alias syu='yay -Syu'
+  alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+  alias mirrors="sudo reflector --verbose --country Peru,Chile,Ecuador,Brazil,US,Colombia,Argentina --protocol https --latest 25 --sort rate --save /etc/pacman.d/mirrorlist"
 fi
 
 # File managers
@@ -171,6 +186,8 @@ if (( $+commands[fastfetch] )); then
   # Config path adaptable per system
   if [[ -f "$HOME/.dotfiles/config/fastfetch/13-custom.jsonc" ]]; then
     alias cff='clear && fastfetch --config $HOME/.dotfiles/config/fastfetch/13-custom.jsonc'
+  elif [[ -f "$HOME/.dotfiles/config/fastfetch/13.jsonc" ]]; then
+    alias cff='clear && fastfetch --config $HOME/.dotfiles/config/fastfetch/13.jsonc'
   else
     alias cff='clear && fastfetch'
   fi
@@ -209,12 +226,27 @@ extract() {
   fi
 }
 
+# Quick backup
+backup() {
+  cp -r "$1" "$1.bak"
+}
+
 #/────────────────────/Powerlevel10k/────────────────────/#
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+# Load p10k config from various locations
 if [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh" ]]; then
   source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh"
 elif [[ -f "$HOME/.dotfiles/config/zsh/p10k.zsh" ]]; then
   source "$HOME/.dotfiles/config/zsh/p10k.zsh"
+fi
+
+#/────────────────────/Start Tmux Automatically/────────────────────/#
+# Start tmux if not already in a tmux session and tmux is installed
+if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]]; then
+  # Don't start tmux in Termux or inside IDE terminals
+  if [[ $IS_TERMUX != "1" ]] && [[ -z "$VSCODE_PID" ]] && [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+    exec tmux new-session -A -s main
+  fi
 fi
