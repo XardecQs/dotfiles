@@ -146,6 +146,7 @@ alias snvim='sudo -E nvim'
 # Git
 alias g='git'
 alias ga='git add'
+alias gp='git pull'
 alias gc='git commit'
 alias gs='git status'
 alias gl='git log --oneline --graph'
