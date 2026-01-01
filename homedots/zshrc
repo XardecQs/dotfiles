@@ -1,0 +1,220 @@
+#!/usr/bin/env zsh
+# Unified ZSH configuration for NixOS, Debian, Termux, etc.
+
+#/────────────────────/Environment Detection/────────────────────/#
+export IS_NIXOS=${IS_NIXOS:-$(test -f /etc/NIXOS && echo "1" || echo "0")}
+export IS_TERMUX=${IS_TERMUX:-$(test -d /data/data/com.termux && echo "1" || echo "0")}
+
+#/────────────────────/p10k-instant-prompt/────────────────────/#
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+#/────────────────────/zinit/────────────────────/#
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [[ ! -d "$ZINIT_HOME" ]]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+source "${ZINIT_HOME}/zinit.zsh"
+
+#/────────────────────/Completion/────────────────────/#
+autoload -Uz compinit
+compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
+
+zinit cdreplay -q
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%F{blue}-- %d --%f'
+
+# FZF tab completion preview
+if (( $+commands[lsd] )); then
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --color=always --tree --depth 2 $realpath 2>/dev/null || exa --color=always --tree --level=2 $realpath 2>/dev/null || ls --color=always $realpath'
+else
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color=always $realpath'
+fi
+
+#/────────────────────/History/────────────────────/#
+HISTSIZE=100000
+SAVEHIST=100000
+HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
+
+setopt extended_history       # Record timestamp of command
+setopt hist_expire_dups_first # Expire duplicate first
+setopt hist_ignore_dups       # Ignore duplicated commands
+setopt hist_ignore_space      # Ignore commands starting with space
+setopt hist_verify            # Show before executing history
+setopt share_history          # Share history between sessions
+setopt inc_append_history     # Immediately append to history
+
+#/────────────────────/Shell Configuration/────────────────────/#
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+
+# Enable colors
+autoload -Uz colors && colors
+
+# Key bindings
+bindkey '^[[1;5C' forward-word       # Ctrl + →
+bindkey '^[[1;5D' backward-word      # Ctrl + ←
+bindkey '^H' backward-kill-word      # Ctrl + Backspace
+bindkey '^[[3~' delete-char          # Delete
+bindkey '^[[3;5~' kill-word          # Ctrl + Delete
+bindkey '^[[1~' beginning-of-line    # Home
+bindkey '^[[4~' end-of-line          # End
+
+#/────────────────────/Tool Initializations/────────────────────/#
+# FZF
+if (( $+commands[fzf] )); then
+  source <(fzf --zsh 2>/dev/null) || eval "$(fzf --zsh)"
+fi
+
+# Zoxide
+if (( $+commands[zoxide] )); then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
+
+#/────────────────────/Plugins/────────────────────/#
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light Aloxaf/fzf-tab
+
+# Platform-specific plugins
+if [[ $IS_NIXOS == "1" ]]; then
+  zinit light nix-community/nix-zsh-completions
+fi
+
+#/────────────────────/Aliases/────────────────────/#
+# Core utils
+alias ls='lsd'
+alias ll='lsd -lh'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
+alias l1='lsd -1'
+alias cat='bat --style=plain'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias cp='cp --reflink=auto --verbose'
+alias mv='mv --verbose'
+alias rm='rm --verbose'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ~='cd ~'
+
+# System
+alias c='clear'
+alias q='exit'
+alias :q='exit'
+alias h='history'
+alias j='jobs -l'
+
+# Editors
+alias vim='nvim'
+alias snvim='sudo -E nvim'
+
+# Git
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias gl='git log --oneline --graph'
+
+# Package management (platform-specific)
+if [[ $IS_NIXOS == "1" ]]; then
+  alias update='sudo nixos-rebuild switch --flake ~/.dotfiles#$(hostname)'
+  alias cleanup='sudo nix-collect-garbage -d'
+elif [[ $IS_TERMUX == "1" ]]; then
+  alias update='pkg update && pkg upgrade'
+else
+  alias update='sudo nala update && sudo nala upgrade'
+  alias syu='yay -Syu'
+fi
+
+# File managers
+if (( $+commands[code] )); then
+  alias codepwd='code "$(pwd)"'
+fi
+
+if (( $+commands[nautilus] )); then
+  alias napwd='nautilus "$(pwd)" 2>/dev/null & disown'
+fi
+
+if (( $+commands[dolphin] )); then
+  alias dopwd='dolphin "$(pwd)" 2>/dev/null & disown'
+fi
+
+# Custom scripts
+if [[ -f "$HOME/Proyectos/Scripts/sh/ordenar.sh" ]]; then
+  alias ordenar='$HOME/Proyectos/Scripts/sh/ordenar.sh'
+fi
+
+if [[ -f "$HOME/Proyectos/Scripts/sh/desordenar.sh" ]]; then
+  alias desordenar='$HOME/Proyectos/Scripts/sh/desordenar.sh'
+fi
+
+# Dotfiles
+alias dots='cd ~/.dotfiles'
+alias dotsn='cd ~/.dotfiles && nvim'
+alias dotsc='cd ~/.dotfiles && codepwd'
+
+# Fastfetch
+if (( $+commands[fastfetch] )); then
+  alias cf='clear && fastfetch'
+  # Config path adaptable per system
+  if [[ -f "$HOME/.dotfiles/config/fastfetch/13-custom.jsonc" ]]; then
+    alias cff='clear && fastfetch --config $HOME/.dotfiles/config/fastfetch/13-custom.jsonc'
+  else
+    alias cff='clear && fastfetch'
+  fi
+fi
+
+# Fun
+if (( $+commands[unimatrix] )); then
+  alias umatrix='unimatrix -s 95 -f'
+fi
+
+#/────────────────────/Functions/────────────────────/#
+# Create directory and cd into it
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+# Extract archives
+extract() {
+  if [[ -f "$1" ]]; then
+    case $1 in
+      *.tar.bz2) tar xjf "$1" ;;
+      *.tar.gz) tar xzf "$1" ;;
+      *.bz2) bunzip2 "$1" ;;
+      *.rar) unrar x "$1" ;;
+      *.gz) gunzip "$1" ;;
+      *.tar) tar xf "$1" ;;
+      *.tbz2) tar xjf "$1" ;;
+      *.tgz) tar xzf "$1" ;;
+      *.zip) unzip "$1" ;;
+      *.Z) uncompress "$1" ;;
+      *.7z) 7z x "$1" ;;
+      *) echo "'$1' cannot be extracted" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+#/────────────────────/Powerlevel10k/────────────────────/#
+mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+if [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh" ]]; then
+  source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh"
+elif [[ -f "$HOME/.dotfiles/config/zsh/p10k.zsh" ]]; then
+  source "$HOME/.dotfiles/config/zsh/p10k.zsh"
+fi
