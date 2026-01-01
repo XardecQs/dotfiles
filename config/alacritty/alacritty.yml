@@ -1,0 +1,159 @@
+# Archivo: alacritty.yml
+# Configuración adaptada desde kitty.conf
+
+# ======================
+# TEMA OSCURO (desde dark-theme.auto.conf)
+# ======================
+colors:
+  primary:
+    background: '#1d1d20'
+    foreground: '#fffaf3'
+  cursor:
+    text: '#0d0f18'
+    cursor: '#cacaca'
+  normal:
+    black:   '#241f31'
+    red:     '#ff000f'
+    green:   '#8ce00a'
+    yellow:  '#ffb900'
+    blue:    '#008df8'
+    magenta: '#6c43a5'
+    cyan:    '#00d7eb'
+    white:   '#ffffff'
+  bright:
+    black:   '#444444'
+    red:     '#ff273f'
+    green:   '#abe05a'
+    yellow:  '#ffd141'
+    blue:    '#0092ff'
+    magenta: '#9a5feb'
+    cyan:    '#67ffef'
+    white:   '#ffffff'
+  selection:
+    text:   '#0d0f18'
+    background: '#cacaca'
+
+# ======================
+# VENTANA
+# ======================
+window:
+  dimensions:
+    columns: 800
+    lines: 500
+  padding:
+    x: 5
+    y: 5
+  decorations: none  # Similar a hide_window_decorations
+  startup_mode: Windowed
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+# ======================
+# TIPO DE LETRA
+# ======================
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+  bold:
+    style: Bold
+  italic:
+    style: Italic
+  bold_italic:
+    style: Bold Italic
+  size: 11.0
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+# ======================
+# CURSOR
+# ======================
+cursor:
+  style:
+    shape: Underline  # Equivalente a cursor_shape underline
+    blinking: Never   # Equivalente a cursor_blink_interval -1
+  thickness: 0.15
+  blink_timeout: 15   # cursor_stop_blinking_after
+
+# ======================
+# TEXTO Y SCROLLBACK
+# ======================
+scrolling:
+  history: 50000      # scrollback_lines
+  multiplier: 3
+
+selection:
+  save_to_clipboard: true
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+# ======================
+# RATÓN
+# ======================
+mouse:
+  hide_when_typing: true
+  bindings:
+    - { mouse: Middle, action: PasteSelection }
+  url:
+    launcher:
+      program: xdg-open
+    modifiers: Control
+
+# ======================
+# RENDIMIENTO
+# ======================
+render_timer: false
+persistent_logging: false
+
+# ======================
+# SHELL
+# ======================
+shell:
+  program: /bin/bash
+  args:
+    - --login
+
+env:
+  TERM: xterm-256color
+
+# ======================
+# ATAJOS DE TECLADO
+# ======================
+key_bindings:
+  - { key: F5,        action: SpawnNewInstance }
+  - { key: Add,       mods: Control, action: IncreaseFontSize }
+  - { key: Subtract,  mods: Control, action: DecreaseFontSize }
+  - { key: Key0,      mods: Control, action: ResetFontSize }
+  - { key: Equals,    mods: Control, action: IncreaseFontSize }
+  - { key: Minus,     mods: Control, action: DecreaseFontSize }
+
+  # Navegación entre ventanas (si usas un gestor de ventanas)
+  # - { key: Left,      mods: Control, action: Left }
+  # - { key: Right,     mods: Control, action: Right }
+  # - { key: Up,        mods: Control, action: Up }
+  # - { key: Down,      mods: Control, action: Down }
+
+# ======================
+# AVANZADO
+# ======================
+debug:
+  render_timer: false
+  persistent_logging: false
+  renderer: glsl3
+  prefer_dark_bright_colors: true
+
+bell:
+  animation: EaseOutExpo
+  duration: 0
+  color: '#ffffff'
+
+live_config_reload: true
+
+hints:
+  enabled:
+    - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|irc:|ftps:|ftp:)"
+      hyperlinks: true
+      action: Open
