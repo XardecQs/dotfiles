@@ -47,6 +47,18 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
 
+# Crear directorio y archivo de historial si no existen
+if [[ ! -d "$(dirname "$HISTFILE")" ]]; then
+  mkdir -p "$(dirname "$HISTFILE")"
+  echo "✓ Directorio de historial creado: $(dirname "$HISTFILE")"
+fi
+
+if [[ ! -f "$HISTFILE" ]]; then
+  touch "$HISTFILE"
+  chmod 600 "$HISTFILE" 2>/dev/null
+  echo "✓ Archivo de historial creado: $HISTFILE"
+fi
+
 setopt extended_history       # Record timestamp of command
 setopt hist_expire_dups_first # Expire duplicate first
 setopt hist_ignore_dups       # Ignore duplicated commands
