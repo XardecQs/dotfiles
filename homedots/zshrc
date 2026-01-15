@@ -119,6 +119,7 @@ alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 alias l1='lsd -1'
+alias bat='batcat'
 alias cat='bat --style=plain'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
@@ -192,6 +193,8 @@ fi
 alias dots='cd ~/.dotfiles'
 alias dotsn='cd ~/.dotfiles && nvim'
 alias dotsc='cd ~/.dotfiles && codepwd'
+alias ordenar='~/.dotfiles/scripts/ordenar.sh'
+alias desordenar='~/.dotfiles/scripts/desordenar.sh'
 
 # Fastfetch
 if (( $+commands[fastfetch] )); then
