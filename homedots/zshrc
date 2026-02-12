@@ -146,7 +146,6 @@ done
 
 #──────────────────── Tmux Smart Auto-start ────────────────────#
 # Only auto-start tmux in appropriate contexts
-# Skip if: already in tmux, in VSCode terminal, in Alacritty, or in IDE terminal
 if (( $+commands[tmux] )) && \
    [[ -z "$TMUX" ]] && \
    [[ -n "$PS1" ]] && \
