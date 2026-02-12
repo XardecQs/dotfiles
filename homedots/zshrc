@@ -1,12 +1,9 @@
 #!/usr/bin/env zsh
-# Optimized ZSH configuration for NixOS (KISS principle)
-
-#──────────────────── Environment Detection ────────────────────#
-export IS_NIXOS=$(test -f /etc/NIXOS && echo 1 || echo 0)
-export IS_TERMUX=$(test -d /data/data/com.termux && echo 1 || echo 0)
-export IS_WSL=$(grep -qi microsoft /proc/version 2>/dev/null && echo 1 || echo 0)
+# Optimized ZSH configuration for NixOS
+# Last updated: 2026-02-11
 
 #──────────────────── P10k Instant Prompt ────────────────────#
+# Enable Powerlevel10k instant prompt for faster startup
 [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]] && \
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 
@@ -51,13 +48,13 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview \
   'lsd --color=always --tree --depth 2 $realpath 2>/dev/null || ls --color=always $realpath'
 
 #──────────────────── Key Bindings ────────────────────#
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-bindkey '^H' backward-kill-word
-bindkey '^[[3~' delete-char
-bindkey '^[[3;5~' kill-word
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[4~' end-of-line
+bindkey '^[[1;5C' forward-word      # Ctrl+Right
+bindkey '^[[1;5D' backward-word     # Ctrl+Left
+bindkey '^H' backward-kill-word     # Ctrl+Backspace
+bindkey '^[[3~' delete-char         # Delete
+bindkey '^[[3;5~' kill-word         # Ctrl+Delete
+bindkey '^[[1~' beginning-of-line   # Home
+bindkey '^[[4~' end-of-line         # End
 
 #──────────────────── Tool Integrations ────────────────────#
 (( $+commands[fzf] )) && eval "$(fzf --zsh)"
@@ -69,7 +66,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
-[[ $IS_NIXOS == "1" ]] && zinit light nix-community/nix-zsh-completions
+zinit light nix-community/nix-zsh-completions
 
 #──────────────────── Aliases ────────────────────#
 # Core utilities
@@ -89,23 +86,19 @@ alias vim='nvim' snvim='sudo -E nvim'
 alias g='git' ga='git add' gp='git pull' gc='git commit' \
       gs='git status' gl='git log --oneline --graph' gd='git diff'
 
-# NixOS specific
-if [[ $IS_NIXOS == "1" ]]; then
-  alias update='sudo nixos-rebuild switch --flake /etc/nixos'
-  alias cleanup='sudo nix-collect-garbage -d'
-  alias nix-shell='nix-shell --run zsh'
-elif [[ $IS_TERMUX == "1" ]]; then
-  alias update='pkg update && pkg upgrade'
-else
-  alias update='sudo apt update && sudo apt upgrade'
-fi
+# NixOS management
+alias update='sudo nixos-rebuild switch --flake /etc/nixos'
+alias test-update='sudo nixos-rebuild test --flake /etc/nixos'
+alias cleanup='sudo nix-collect-garbage -d'
+alias nix-shell='nix-shell --run zsh'
+alias nix-search='nix search nixpkgs'
 
 # Dotfiles management
 alias dots='cd ~/.dotfiles'
 alias dotsn='cd ~/.dotfiles && nvim'
 alias dotsc='cd ~/.dotfiles && code .'
 
-# Conditional tools
+# Conditional tool aliases
 (( $+commands[code] )) && alias codepwd='code "$(pwd)"'
 (( $+commands[nautilus] )) && alias napwd='nautilus "$(pwd)" 2>/dev/null & disown'
 (( $+commands[dolphin] )) && alias dopwd='dolphin "$(pwd)" 2>/dev/null & disown'
@@ -113,8 +106,10 @@ alias dotsc='cd ~/.dotfiles && code .'
 (( $+commands[unimatrix] )) && alias umatrix='unimatrix -s 95 -f'
 
 #──────────────────── Functions ────────────────────#
+# Create directory and cd into it
 mkcd() { mkdir -p "$1" && cd "$1"; }
 
+# Extract various archive formats
 extract() {
   [[ ! -f "$1" ]] && echo "'$1' is not a valid file" && return 1
   case $1 in
@@ -132,7 +127,14 @@ extract() {
   esac
 }
 
+# Quick backup
 backup() { cp -r "$1" "$1.bak"; }
+
+# NixOS specific: rebuild and switch with automatic sudo
+rebuild() {
+  local flake_path="${1:-/etc/nixos}"
+  sudo nixos-rebuild switch --flake "$flake_path"
+}
 
 #──────────────────── Powerlevel10k Theme ────────────────────#
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -142,9 +144,15 @@ for config in "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh" "$HOME/.dotfiles/
   [[ -f "$config" ]] && source "$config" && break
 done
 
-#──────────────────── Tmux Auto-start ────────────────────#
-if (( $+commands[tmux] )) && [[ -z "$TMUX" && -n "$PS1" ]] && \
-   [[ ! "$TERM" =~ (screen|tmux) ]] && [[ $IS_TERMUX != "1" ]] && \
-   [[ -z "$VSCODE_PID" && -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+#──────────────────── Tmux Smart Auto-start ────────────────────#
+# Only auto-start tmux in appropriate contexts
+# Skip if: already in tmux, in VSCode terminal, in Alacritty, or in IDE terminal
+if (( $+commands[tmux] )) && \
+   [[ -z "$TMUX" ]] && \
+   [[ -n "$PS1" ]] && \
+   [[ ! "$TERM" =~ (screen|tmux) ]] && \
+   [[ -z "$VSCODE_PID" ]] && \
+   [[ -z "$TERM_PROGRAM" ]] && \
+   [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   exec tmux new-session -A -s main
 fi
