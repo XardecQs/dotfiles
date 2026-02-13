@@ -8,7 +8,7 @@
 ### inicio
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYLOCK
 exec gnome-keyring-daemon --start --components=pkgs,secrets,ssh
-
+exec waybar
 ### Variables
 set $mod   Mod4
 set $left  h
@@ -16,12 +16,14 @@ set $down  j
 set $up    k
 set $right l
 set $term  alacritty
-set $menu  wofi --show drun
+set $menu  rofi -show drun
+set $files nautilus
 
 default_border pixel 2
 default_floating_border pixel 0
 ### Output & Input
-output * bg #018281 solid_color
+# output * bg #018281 solid_color
+output * bg ~/.config/wallpaper fill
 
 input "type:keyboard" {
     xkb_layout "latam"
@@ -34,11 +36,12 @@ input "type:touchpad" {
 }
 
 ### General Bindings
-bindsym $mod+Return       exec $term
-bindsym $mod+Shift+q      kill
+bindsym $mod+q            exec $term
+bindsym $mod+c            kill
 bindsym $mod+d            exec $menu
 bindsym $mod+Shift+c      reload
 bindsym $mod+Shift+e      exec swaynag -t warning -m '¿Salir de Sway?' -B 'Sí' 'swaymsg exit'
+bindsym $mod+e            exec $files
 
 floating_modifier $mod normal
 
@@ -90,7 +93,7 @@ bindsym $mod+b           splith
 bindsym $mod+v           splitv
 bindsym $mod+s           layout stacking
 bindsym $mod+w           layout tabbed
-bindsym $mod+e           layout toggle split
+#bindsym $mod+e           layout toggle split
 bindsym $mod+f           fullscreen
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space       focus mode_toggle
@@ -125,15 +128,19 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### Bar
-bar {
-    position top
-    status_command while date +'%Y-%m-%d %H:%M'; do sleep 10; done
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#bar {
+#    position top
+#    font "SF Pro Display medium"
+#    status_edge_padding 10
+#    status_command while date +'%Y-%m-%d %H:%M'; do sleep 10; done
+#    colors {
+#        statusline #ffffff
+#        background #191919
+#        separator #ffffff
+#        inactive_workspace #191919 #ffffff #191919
+#        focused_workspace #191919 #191919 #ffffff
+#    }
+#}
 
 for_window [app_id="xfce4-appfinder"] floating enable
 
