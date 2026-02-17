@@ -136,6 +136,30 @@ rebuild() {
   sudo nixos-rebuild switch --flake "$flake_path"
 }
 
+whereisreal() {
+  local target="$1"
+  local binary_path
+  
+  binary_path="${target:A}"
+
+  if [[ ! -e "$binary_path" ]]; then
+    binary_path=$(which "$target" 2>/dev/null)
+  fi
+
+  if [[ -z "$binary_path" || ! -e "$binary_path" ]]; then
+    echo "Error: '$target' no es un archivo válido ni un comando en el PATH."
+    return 1
+  fi
+
+  if [[ -L "$binary_path" ]]; then
+    echo "Es un enlace simbólico que apunta a:"
+    realpath "$binary_path"
+  else
+    echo "Es un archivo real (no es un enlace):"
+    echo "$binary_path"
+  fi
+}
+
 #──────────────────── Powerlevel10k Theme ────────────────────#
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -156,11 +180,3 @@ if (( $+commands[tmux] )) && \
   exec tmux new-session -A -s main
 fi
 
-whereisreal() {
-  local target="$1"
-  if [ -L "$target" ]; then
-    echo "No es un enlace simbolico"
-  else
-    realpath $(which "$target")
-  fi
-}
