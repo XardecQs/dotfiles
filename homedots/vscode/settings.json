@@ -1,0 +1,13 @@
+{
+  "rust-analyzer.workspace.discoverConfig": null,
+  "nix.enableLanguageServer": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.fontFamily": "'JetBrainsMono NFM', 'Droid Sans Mono', 'monospace', monospace",
+  "workbench.colorTheme": "One Dark Darker",
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide"
+  },
+  "editor.fontWeight": "600",
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "security.workspace.trust.untrustedFiles": "open",
+}
