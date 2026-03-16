@@ -77,7 +77,7 @@ alias cp='cp --reflink=auto -v' mv='mv -v' rm='rm -v'
 
 # Navigation
 alias ..='cd ..' ...='cd ../..' ....='cd ../../..' ~='cd ~'
-alias ordenar='/home/xardec/.dotfiles/scripts/ordenar.sh' desordenar='/home/xardec/.dotfiles/scripts/desordenar.sh'
+alias ordenar='~/.dotfiles/scripts/ordenar.sh' desordenar='~/.dotfiles/scripts/desordenar.sh'
 
 # Quick commands
 alias c='clear' q='exit' :q='exit' h='history' j='jobs -l'
@@ -103,7 +103,7 @@ alias dotsc='cd ~/.dotfiles && code .'
 (( $+commands[code] )) && alias codepwd='code "$(pwd)"'
 (( $+commands[nautilus] )) && alias napwd='nautilus "$(pwd)" 2>/dev/null & disown'
 (( $+commands[dolphin] )) && alias dopwd='dolphin "$(pwd)" 2>/dev/null & disown'
-(( $+commands[fastfetch] )) && alias cf='clear && fastfetch'
+(( $+commands[fastfetch] )) && alias cf='clear && fastfetch' cff='clear && fastfetch --config ~/.dotfiles/config/fastfetch/13-custom.jsonc'
 (( $+commands[unimatrix] )) && alias umatrix='unimatrix -s 95 -f'
 
 #──────────────────── Functions ────────────────────#
