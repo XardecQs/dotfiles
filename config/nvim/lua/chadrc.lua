@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "default-dark",
+	theme = "onedark",
   transparency = true
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -19,6 +19,6 @@ M.base46 = {
 --       tabufline = {
 --          lazyload = false
 --      }
---}
+-- }
 
 return M
