@@ -1,14 +1,18 @@
 [General]
 hotkey=
+memoryDecay=0.5
 showTray=false
+show_enabled_plugins_first=false
 telemetry=false
 
 [application]
 enabled=true
+trigger=!
 
 [applications]
 enabled=true
 fuzzy=true
+trigger=","
 
 [bluetooth]
 enabled=false
@@ -26,6 +30,7 @@ enabled=false
 [datetime]
 enabled=true
 show_date_on_empty_query=false
+trigger=d
 
 [files]
 enabled=false
@@ -34,17 +39,40 @@ paths=@Invalid()
 [python]
 enabled=true
 
+[python.emoji]
+enabled=true
+fuzzy=false
+trigger=";"
+use_derived=true
+
+[python.locate]
+enabled=true
+trigger=/
+
+[python.translators]
+enabled=false
+
+[python.unit_converter]
+enabled=true
+
+[urlhandler]
+enabled=true
+trigger=b
+
+[widgetboxmodel_themes]
+trigger=t
+
 [widgetsboxmodel]
 alwaysOnTop=true
-clearOnHide=false
+clearOnHide=true
 clientShadow=true
-darkTheme=Spotlight Dark
+darkTheme=Tahoe_Dark
 displayScrollbar=true
 followCursor=true
 hideOnFocusLoss=true
-historySearch=true
+historySearch=false
 itemCount=5
 lightTheme=Spotlight
-quitOnClose=false
+quitOnClose=true
 showCentered=true
 systemShadow=true

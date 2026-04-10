@@ -78,4 +78,34 @@
   "latex-workshop.latex.outDir": "%DIR%/build",
   "zenMode.fullScreen": false,
   "workbench.sideBar.location": "right",
+  "workbench.editorAssociations": {
+    "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+    "*.qrc": "qt-core.qrcEditor"
+  },
+  // --- Modding de GTA SA ---
+  "gta3script.compiler": "/home/xardec/Trastero/gta3sc/build/gta3sc",
+  "gta3script.config": "gtasa",
+  "gta3script.configpath": null,
+  "gta3script.buildflags": {
+    "gta3": [
+      "--cs"
+    ],
+    "gtavc": [
+      "--cs"
+    ],
+    "gtasa": [
+      "--guesser",
+      "-fbreak-continue",
+      "-fno-entity-tracking",
+      "-fcleo",
+      "--cs",
+      "-O"
+    ]
+  },
+  "gta3script.docprovider": [
+    "Sanny Builder Library",
+    "GTAModding",
+    "GTAG Opcode Database"
+  ],
+  // --- a ---
 }
