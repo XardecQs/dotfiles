@@ -69,13 +69,14 @@ zinit light nix-community/nix-zsh-completions
 alias ls='lsd' ll='lsd -lh' la='lsd -a' lla='lsd -la' lt='lsd --tree'
 alias cat='bat --style=plain'
 alias grep='grep --color=auto' diff='diff --color=auto'
-alias cp='cp --reflink=auto -v' mv='mv -v' rm='rm -v'
+alias cp='cp --reflink=auto -v' mv='mv -v' #rm='rm -v'
 
 # Navigation
 alias ..='cd ..' ...='cd ../..' ....='cd ../../..' ~='cd ~'
 alias ordenar='~/.dotfiles/scripts/ordenar.sh' desordenar='~/.dotfiles/scripts/desordenar.sh'
 
 # Quick commands
+alias tmx='tmux attach -t main || tmux new-session -s main'
 alias c='clear' q='exit' :q='exit' h='history' j='jobs -l'
 alias vim='nvim' snvim='sudo -E nvim'
 
@@ -183,6 +184,25 @@ whereisreal() {
   fi
 }
 
+crun() {
+    if [ -z "$1" ]; then
+        echo "Uso: crun archivo.cpp [argumentos...]"
+        return 1
+    fi
+
+    local file="$1"
+    local base=$(basename "${file%.*}")
+    local exec="/tmp/crun_$base"
+
+    g++ -std=c++20 -O2 -Wall -Wextra "$file" -o "$exec" || return 1
+
+    "$exec" "${@:2}"
+    local exit_code=$?
+
+    rm -f "$exec"
+    return $exit_code
+}
+
 #──────────────────── Powerlevel10k Theme ────────────────────#
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -193,13 +213,13 @@ done
 
 #──────────────────── Tmux Smart Auto-start ────────────────────#
 # Only auto-start tmux in appropriate contexts
-if (( $+commands[tmux] )) && \
-   [[ -z "$TMUX" ]] && \
-   [[ -n "$PS1" ]] && \
-   [[ ! "$TERM" =~ (screen|tmux) ]] && \
-   [[ -z "$VSCODE_PID" ]] && \
-   [[ -z "$TERM_PROGRAM" ]] && \
-   [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
-  exec tmux new-session -A -s main
-fi
+#if (( $+commands[tmux] )) && \
+#   [[ -z "$TMUX" ]] && \
+#   [[ -n "$PS1" ]] && \
+#   [[ ! "$TERM" =~ (screen|tmux) ]] && \
+#   [[ -z "$VSCODE_PID" ]] && \
+#   [[ -z "$TERM_PROGRAM" ]] && \
+#   [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+#  exec tmux new-session -A -s main
+#fi
 

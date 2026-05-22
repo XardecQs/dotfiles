@@ -13,7 +13,6 @@
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "none",
   "window.autoDetectHighContrast": false,
-  "breadcrumbs.enabled": false,
   "update.mode": "manual",
   "chat.agentsControl.enabled": false,
   "workbench.navigationControl.enabled": false,
