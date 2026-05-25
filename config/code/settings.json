@@ -82,7 +82,7 @@
     "*.qrc": "qt-core.qrcEditor"
   },
   // --- Modding de GTA SA ---
-  "gta3script.compiler": "/home/xardec/Trastero/gta3sc/build/gta3sc",
+  "gta3script.compiler": null,
   "gta3script.config": "gtasa",
   "gta3script.configpath": null,
   "gta3script.buildflags": {

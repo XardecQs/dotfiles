@@ -2,7 +2,7 @@
 live_config_reload = true
 
 [terminal]
-shell = "/run/current-system/sw/bin/zsh"
+shell = "zsh"
 
 [colors.bright]
 black = "#444444"

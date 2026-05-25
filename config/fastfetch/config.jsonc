@@ -1,7 +1,7 @@
 {
   "logo": {
     "type": "auto",
-    "source": "/home/xardec/.dotfiles/config/fastfetch/logo.txt",
+    "source": "logo.txt",
     "height": 18,
     "padding": {
       "top": 6,
