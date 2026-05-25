@@ -8,9 +8,6 @@
   outputs =
     { self, nixpkgs, ... }:
     let
-      configDir = "${self}/config";
-      homeDots = "${self}/homedots";
-
       mkDotfiles =
         {
           config,
@@ -20,62 +17,74 @@
         }:
         let
           cfg = config.modulos.home.core.dotfiles;
+
+          resolveSource =
+            path:
+            if cfg.localPath != null then
+              config.lib.file.mkOutOfStoreSymlink "${cfg.localPath}/${path}"
+            else
+              "${self}/${path}";
         in
         {
           options.modulos.home.core.dotfiles = {
             enable = lib.mkEnableOption "dotfiles";
+            localPath = lib.mkOption {
+              type = lib.types.nullOr lib.types.str;
+              default = null;
+              description = "Ruta local del repo para symlinks directos (cambios instantáneos sin rebuild)";
+            };
           };
 
           config = lib.mkIf cfg.enable {
             home.file = {
               ".config/nvim" = {
-                source = "${configDir}/nvim";
+                source = resolveSource "config/nvim";
                 recursive = true;
               };
               ".config/kitty" = {
-                source = "${configDir}/kitty";
+                source = resolveSource "config/kitty";
                 recursive = true;
               };
               ".config/fastfetch" = {
-                source = "${configDir}/fastfetch";
+                source = resolveSource "config/fastfetch";
                 recursive = true;
               };
               ".config/zsh" = {
-                source = "${configDir}/zsh";
+                source = resolveSource "config/zsh";
                 recursive = true;
               };
               ".config/Code/User/settings.json" = {
-                source = "${configDir}/code/settings.json";
+                source = resolveSource "config/code/settings.json";
               };
               ".config/tmux" = {
-                source = "${configDir}/tmux";
+                source = resolveSource "config/tmux";
                 recursive = true;
               };
               ".zshrc" = {
-                source = "${homeDots}/zshrc";
+                source = resolveSource "homedots/zshrc";
               };
               ".config/alacritty" = {
-                source = "${configDir}/alacritty";
+                source = resolveSource "config/alacritty";
                 recursive = true;
               };
               ".config/sway" = {
-                source = "${configDir}/sway";
+                source = resolveSource "config/sway";
                 recursive = true;
               };
               ".config/waybar" = {
-                source = "${configDir}/waybar";
+                source = resolveSource "config/waybar";
                 recursive = true;
               };
               ".config/wal" = {
-                source = "${configDir}/wal";
+                source = resolveSource "config/wal";
                 recursive = true;
               };
               ".config/albert" = {
-                source = "${configDir}/albert";
+                source = resolveSource "config/albert";
                 recursive = true;
               };
               ".local/share/albert/widgetsboxmodel" = {
-                source = "${configDir}/albert/widgetsboxmodel";
+                source = resolveSource "config/albert/widgetsboxmodel";
                 recursive = true;
               };
             };
