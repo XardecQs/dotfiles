@@ -67,12 +67,12 @@ zinit light nix-community/nix-zsh-completions
 #──────────────────── Aliases ────────────────────#
 # Core utilities
 alias ls='lsd' ll='lsd -lh' la='lsd -a' lla='lsd -la' lt='lsd --tree'
-alias cat='bat --style=plain'
+alias catt='bat --style=plain'
 alias grep='grep --color=auto' diff='diff --color=auto'
 alias cp='cp --reflink=auto -v' mv='mv -v' #rm='rm -v'
 
 # Navigation
-alias ..='cd ..' ...='cd ../..' ....='cd ../../..' ~='cd ~'
+alias ..='cd ..' ...='cd ../..' ....='cd ../../..'
 alias ordenar='~/Proyectos/GitHub/dotfiles/scripts/ordenar.sh' desordenar='~/Proyectos/GitHub/dotfiles/scripts/desordenar.sh'
 
 # Quick commands
@@ -85,11 +85,7 @@ alias g='git' ga='git add' gp='git pull' gc='git commit' \
       gs='git status' gl='git log --oneline --graph' gd='git diff'
 
 # NixOS management
-alias update='sudo nixos-rebuild switch --flake /etc/nixos'
-alias test-update='sudo nixos-rebuild test --flake /etc/nixos'
-alias cleanup='sudo nix-collect-garbage -d'
 alias nix-shell='nix-shell --run zsh'
-alias nix-search='nix search nixpkgs'
 
 # Dotfiles management
 alias dots='cd ~/Proyectos/GitHub/dotfiles'
@@ -99,7 +95,6 @@ alias dotsc='cd ~/Proyectos/GitHub/dotfiles && code .'
 # Conditional tool aliases
 (( $+commands[code] )) && alias codepwd='code "$(pwd)"'
 (( $+commands[nautilus] )) && alias napwd='nautilus "$(pwd)" 2>/dev/null & disown'
-(( $+commands[dolphin] )) && alias dopwd='dolphin "$(pwd)" 2>/dev/null & disown'
 (( $+commands[fastfetch] )) && alias cf='clear && fastfetch' cff='clear && fastfetch --config ~/.config/fastfetch/13-custom.jsonc'
 (( $+commands[unimatrix] )) && alias umatrix='unimatrix -s 95 -f'
 
@@ -210,16 +205,3 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 for config in "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/p10k.zsh"; do
   [[ -f "$config" ]] && source "$config" && break
 done
-
-#──────────────────── Tmux Smart Auto-start ────────────────────#
-# Only auto-start tmux in appropriate contexts
-#if (( $+commands[tmux] )) && \
-#   [[ -z "$TMUX" ]] && \
-#   [[ -n "$PS1" ]] && \
-#   [[ ! "$TERM" =~ (screen|tmux) ]] && \
-#   [[ -z "$VSCODE_PID" ]] && \
-#   [[ -z "$TERM_PROGRAM" ]] && \
-#   [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
-#  exec tmux new-session -A -s main
-#fi
-
