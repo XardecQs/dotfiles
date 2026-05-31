@@ -1,5 +1,5 @@
 {
-  description = "Dotfiles personales para NixOS + Sway";
+  description = "Dotfiles personales para NixOS + Sway + Hyprland";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -77,6 +77,14 @@
               };
               ".config/wal" = {
                 source = resolveSource "config/wal";
+                recursive = true;
+              };
+              ".config/hypr" = {
+                source = resolveSource "config/hypr";
+                recursive = true;
+              };
+              ".config/wlogout" = {
+                source = resolveSource "config/wlogout";
                 recursive = true;
               };
               ".config/albert" = {
