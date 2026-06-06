@@ -100,6 +100,7 @@
             xdg.userDirs = {
               enable = true;
               createDirectories = true;
+              setSessionVariables = false;
               desktop = "$HOME/Documentos/Escritorio";
               documents = "$HOME/Documentos";
               download = "$HOME/Descargas";
