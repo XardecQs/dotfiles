@@ -148,6 +148,7 @@
                 music = "$HOME/Media/Música";
                 pictures = "$HOME/Media/Imágenes";
                 videos = "$HOME/Media/Vídeos";
+                projects = "$HOME/Proyectos";
                 templates = "$HOME/Documentos/Plantillas";
                 publicShare = "$HOME/Documentos/Público";
               };
