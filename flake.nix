@@ -6,13 +6,12 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }:
+    { self, ... }:
     let
       mkDotfiles =
         {
           config,
           lib,
-          pkgs,
           ...
         }:
         let

@@ -6,7 +6,7 @@
 }
 {
     "label" : "wallpaper",
-    "action" : "/home/xardec/Proyectos/GitHub/simple-wallpaper-manager/wallpaper.sh 'Imagen aleatoria'",
+    "action" : "$HOME/Proyectos/GitHub/simple-wallpaper-manager/wallpaper.sh 'Imagen aleatoria'",
     "text" : "Wallpaper aleatorio",
     "keybind" : "w"
 }
